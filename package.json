@@ -1,0 +1,21 @@
+{
+  "name": "learningplaywrightfundamental3x",
+  "version": "1.0.0",
+  "description": "A basic Playwright Test project for learning browser automation and recording tests with Codegen.",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "codegen": "playwright codegen https://app.thetestingacademy.com/playwright/multiple_element_filter",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.5.0"
+  }
+}
