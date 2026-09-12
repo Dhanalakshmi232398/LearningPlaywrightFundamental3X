@@ -59,7 +59,7 @@ The project includes ready‑made npm scripts:
 You can also run a single test file:
 
 ```bash
-npx playwright test tests/example.spec.ts
+npx playwright test tests/01_Basics/216_example.spec.ts
 ```
 
 Or run tests in a specific browser only:
@@ -90,7 +90,7 @@ npx playwright codegen https://app.thetestingacademy.com/playwright/multiple_ele
 2. **Interact with the page** — click buttons, fill forms, navigate. Playwright records every action.
 3. The Inspector **generates the test code live**, with proper locators and assertions.
 4. Use the **Record / Stop / Step** buttons to control recording, and the copy button to grab the generated script.
-5. **Paste the generated code** into a new file under `tests/`, for example `tests/my-test.spec.ts`.
+5. **Paste the generated code** into a new file under the relevant topic folder, for example `tests/03_Locator_Commands/my-test.spec.ts`.
 
 For any other page, pass the URL directly:
 
@@ -102,13 +102,28 @@ npx playwright codegen https://example.com
 
 ## Project Structure
 
+Tests are grouped into numbered topic folders so they read in learning order:
+
 ```text
 .
 ├── tests/
-│   ├── example.spec.ts     # Example end-to-end test
-│   └── sample.spec.ts      # Sample test with login flow
-├── playwright.config.ts    # Test runner configuration
-├── package.json            # Dependencies and npm scripts
+│   ├── 01_Basics/                  # Core concepts: browser, context, page, options
+│   │   ├── 216_example.spec.ts         # Example end-to-end test
+│   │   ├── 217_Multiple_Context.ts     # Multiple isolated browser contexts
+│   │   ├── 218_Normal_Playwright.ts    # Browser → context → page flow with the raw API
+│   │   ├── 219_tta_sample.spec.ts      # Sample login flow (The Testing Academy)
+│   │   ├── 220_BCP.spec.ts             # Browser / Context / Page levels explained
+│   │   ├── 221_TA.spec.ts              # Navigation and multi-context test
+│   │   └── 222.Test_Options.spec.ts    # Context options (locale, viewport, mobile…)
+│   ├── 02_TestAnnotations/         # Test-level annotations and grouping
+│   │   ├── 223_TestAnnotations.spec.ts # skip, only, fail, fixme, slow
+│   │   └── 224_TestDescribe.spec.ts    # Grouping tests with test.describe
+│   └── 03_Locator_Commands/        # Locators and element interactions
+│       └── 225_LocatorComand.spec.ts   # Locator commands
+├── ResearchTopics/
+│   └── Playwright_Architecture.html # Visual reference on Playwright's architecture
+├── playwright.config.ts            # Test runner configuration
+├── package.json                    # Dependencies and npm scripts
 ├── package-lock.json
 └── README.md
 ```
@@ -117,14 +132,14 @@ The browser projects (Chromium, Firefox, WebKit) and the `headless` option are c
 
 ## Test Credentials
 
-`tests/sample.spec.ts` uses placeholder credentials by default. Set credentials only in your local shell when testing the login flow — never hard‑code real passwords in the repository.
+`tests/01_Basics/219_tta_sample.spec.ts` uses placeholder credentials by default. Set credentials only in your local shell when testing the login flow — never hard‑code real passwords in the repository.
 
 PowerShell:
 
 ```powershell
 $env:TEST_EMAIL = "your-email"
 $env:TEST_PASSWORD = "your-password"
-npm test -- tests/sample.spec.ts
+npm test -- tests/01_Basics/219_tta_sample.spec.ts
 ```
 
 That's it — you are ready to explore Playwright. Happy testing! 🚀

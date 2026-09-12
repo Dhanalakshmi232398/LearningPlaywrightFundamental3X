@@ -2,10 +2,27 @@
 # Command Code local session files
 .commandcode/
 
-# Playwright
+# Dependencies
 node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Playwright test artifacts
 /test-results/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
