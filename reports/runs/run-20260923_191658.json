@@ -1,0 +1,14 @@
+{
+  "runId": "20260923_191658",
+  "tests": {
+    "chromium › 05_AllureReporting\\233_Custom_Report_TestWingify.spec.ts › go directly to dashboard — Test1": "failed",
+    "chromium › 05_AllureReporting\\233_Custom_Report_TestWingify.spec.ts › go directly to dashboard2 — Test2": "failed",
+    "chromium › 05_AllureReporting\\233_Custom_Report_TestWingify.spec.ts › go directly to dashboard3 — Test3": "failed",
+    "firefox › 05_AllureReporting\\233_Custom_Report_TestWingify.spec.ts › go directly to dashboard — Test1": "timedOut",
+    "firefox › 05_AllureReporting\\233_Custom_Report_TestWingify.spec.ts › go directly to dashboard3 — Test3": "passed",
+    "firefox › 05_AllureReporting\\233_Custom_Report_TestWingify.spec.ts › go directly to dashboard2 — Test2": "passed",
+    "webkit › 05_AllureReporting\\233_Custom_Report_TestWingify.spec.ts › go directly to dashboard2 — Test2": "timedOut",
+    "webkit › 05_AllureReporting\\233_Custom_Report_TestWingify.spec.ts › go directly to dashboard — Test1": "timedOut",
+    "webkit › 05_AllureReporting\\233_Custom_Report_TestWingify.spec.ts › go directly to dashboard3 — Test3": "failed"
+  }
+}

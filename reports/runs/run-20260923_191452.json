@@ -1,0 +1,8 @@
+{
+  "runId": "20260923_191452",
+  "tests": {
+    "chromium › 05_AllureReporting\\233_Custom_Report_TestWingify.spec.ts › go directly to dashboard — Test1": "timedOut",
+    "chromium › 05_AllureReporting\\233_Custom_Report_TestWingify.spec.ts › go directly to dashboard2 — Test2": "failed",
+    "chromium › 05_AllureReporting\\233_Custom_Report_TestWingify.spec.ts › go directly to dashboard3 — Test3": "failed"
+  }
+}

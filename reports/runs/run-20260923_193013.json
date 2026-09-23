@@ -1,0 +1,8 @@
+{
+  "runId": "20260923_193013",
+  "tests": {
+    "chromium › 05_AllureReporting\\234_Custom_Report_TestWingify_Media.spec.ts › dashboard media - Test1": "timedOut",
+    "chromium › 05_AllureReporting\\234_Custom_Report_TestWingify_Media.spec.ts › dashboard media - Test2": "timedOut",
+    "chromium › 05_AllureReporting\\234_Custom_Report_TestWingify_Media.spec.ts › dashboard media - Test3": "failed"
+  }
+}
