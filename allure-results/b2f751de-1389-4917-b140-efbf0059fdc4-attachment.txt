@@ -1,0 +1,161 @@
+//table[@aria-label='Employee Management System table']/tbody/tr[1]/td[1]
+
+//table[@aria-label='Employee Management System table']/tbody/tr[1]/td[2]
+Aarav.Sharma
+//table[@aria-label='Employee Management System table']/tbody/tr[1]/td[3]
+AS
+Aarav Sharma
+EMP-1001
+//table[@aria-label='Employee Management System table']/tbody/tr[1]/td[4]
+QA Engineer
+//table[@aria-label='Employee Management System table']/tbody/tr[1]/td[5]
+Pune
+//table[@aria-label='Employee Management System table']/tbody/tr[1]/td[6]
+Cloud QA
+//table[@aria-label='Employee Management System table']/tbody/tr[1]/td[7]
+ACTIVE
+//table[@aria-label='Employee Management System table']/tbody/tr[2]/td[1]
+
+//table[@aria-label='Employee Management System table']/tbody/tr[2]/td[2]
+Priya.Nair
+//table[@aria-label='Employee Management System table']/tbody/tr[2]/td[3]
+PN
+Priya Nair
+EMP-1002
+//table[@aria-label='Employee Management System table']/tbody/tr[2]/td[4]
+Product Owner
+//table[@aria-label='Employee Management System table']/tbody/tr[2]/td[5]
+Bengaluru
+//table[@aria-label='Employee Management System table']/tbody/tr[2]/td[6]
+Nimbus CRM
+//table[@aria-label='Employee Management System table']/tbody/tr[2]/td[7]
+ACTIVE
+//table[@aria-label='Employee Management System table']/tbody/tr[3]/td[1]
+
+//table[@aria-label='Employee Management System table']/tbody/tr[3]/td[2]
+Rohan.Mehta
+Checkbox for Rohan.Mehta is clicked.
+//table[@aria-label='Employee Management System table']/tbody/tr[3]/td[3]
+RM
+Rohan Mehta
+EMP-1003
+//table[@aria-label='Employee Management System table']/tbody/tr[3]/td[4]
+SDET Lead
+//table[@aria-label='Employee Management System table']/tbody/tr[3]/td[5]
+Gurugram
+//table[@aria-label='Employee Management System table']/tbody/tr[3]/td[6]
+Cloud QA
+//table[@aria-label='Employee Management System table']/tbody/tr[3]/td[7]
+ACTIVE
+//table[@aria-label='Employee Management System table']/tbody/tr[4]/td[1]
+
+//table[@aria-label='Employee Management System table']/tbody/tr[4]/td[2]
+Ananya.Iyer
+//table[@aria-label='Employee Management System table']/tbody/tr[4]/td[3]
+AI
+Ananya Iyer
+EMP-1004
+//table[@aria-label='Employee Management System table']/tbody/tr[4]/td[4]
+DevOps Engineer
+//table[@aria-label='Employee Management System table']/tbody/tr[4]/td[5]
+Chennai
+//table[@aria-label='Employee Management System table']/tbody/tr[4]/td[6]
+Monsoon Pay
+//table[@aria-label='Employee Management System table']/tbody/tr[4]/td[7]
+ONBOARDING
+//table[@aria-label='Employee Management System table']/tbody/tr[5]/td[1]
+
+//table[@aria-label='Employee Management System table']/tbody/tr[5]/td[2]
+Kabir.Khan
+//table[@aria-label='Employee Management System table']/tbody/tr[5]/td[3]
+KK
+Kabir Khan
+EMP-1005
+//table[@aria-label='Employee Management System table']/tbody/tr[5]/td[4]
+Security Tester
+//table[@aria-label='Employee Management System table']/tbody/tr[5]/td[5]
+Hyderabad
+//table[@aria-label='Employee Management System table']/tbody/tr[5]/td[6]
+Udaan Risk
+//table[@aria-label='Employee Management System table']/tbody/tr[5]/td[7]
+ACTIVE
+//table[@aria-label='Employee Management System table']/tbody/tr[6]/td[1]
+
+//table[@aria-label='Employee Management System table']/tbody/tr[6]/td[2]
+Meera.Rao
+//table[@aria-label='Employee Management System table']/tbody/tr[6]/td[3]
+MR
+Meera Rao
+EMP-1006
+//table[@aria-label='Employee Management System table']/tbody/tr[6]/td[4]
+Automation Architect
+//table[@aria-label='Employee Management System table']/tbody/tr[6]/td[5]
+Mumbai
+//table[@aria-label='Employee Management System table']/tbody/tr[6]/td[6]
+Cloud Ledger
+//table[@aria-label='Employee Management System table']/tbody/tr[6]/td[7]
+ACTIVE
+//table[@aria-label='Employee Management System table']/tbody/tr[7]/td[1]
+
+//table[@aria-label='Employee Management System table']/tbody/tr[7]/td[2]
+Vikram.Singh
+//table[@aria-label='Employee Management System table']/tbody/tr[7]/td[3]
+VS
+Vikram Singh
+EMP-1007
+//table[@aria-label='Employee Management System table']/tbody/tr[7]/td[4]
+API Tester
+//table[@aria-label='Employee Management System table']/tbody/tr[7]/td[5]
+Noida
+//table[@aria-label='Employee Management System table']/tbody/tr[7]/td[6]
+Bharat API
+//table[@aria-label='Employee Management System table']/tbody/tr[7]/td[7]
+INACTIVE
+//table[@aria-label='Employee Management System table']/tbody/tr[8]/td[1]
+
+//table[@aria-label='Employee Management System table']/tbody/tr[8]/td[2]
+Neha.Patel
+//table[@aria-label='Employee Management System table']/tbody/tr[8]/td[3]
+NP
+Neha Patel
+EMP-1008
+//table[@aria-label='Employee Management System table']/tbody/tr[8]/td[4]
+Release Manager
+//table[@aria-label='Employee Management System table']/tbody/tr[8]/td[5]
+Ahmedabad
+//table[@aria-label='Employee Management System table']/tbody/tr[8]/td[6]
+Cloud Retail
+//table[@aria-label='Employee Management System table']/tbody/tr[8]/td[7]
+ACTIVE
+//table[@aria-label='Employee Management System table']/tbody/tr[9]/td[1]
+
+//table[@aria-label='Employee Management System table']/tbody/tr[9]/td[2]
+Ishaan.Das
+//table[@aria-label='Employee Management System table']/tbody/tr[9]/td[3]
+ID
+Ishaan Das
+EMP-1009
+//table[@aria-label='Employee Management System table']/tbody/tr[9]/td[4]
+Manual Tester
+//table[@aria-label='Employee Management System table']/tbody/tr[9]/td[5]
+Kolkata
+//table[@aria-label='Employee Management System table']/tbody/tr[9]/td[6]
+Cloud QA
+//table[@aria-label='Employee Management System table']/tbody/tr[9]/td[7]
+ONBOARDING
+//table[@aria-label='Employee Management System table']/tbody/tr[10]/td[1]
+
+//table[@aria-label='Employee Management System table']/tbody/tr[10]/td[2]
+Sana.Qureshi
+//table[@aria-label='Employee Management System table']/tbody/tr[10]/td[3]
+SQ
+Sana Qureshi
+EMP-1010
+//table[@aria-label='Employee Management System table']/tbody/tr[10]/td[4]
+Data QA Analyst
+//table[@aria-label='Employee Management System table']/tbody/tr[10]/td[5]
+Indore
+//table[@aria-label='Employee Management System table']/tbody/tr[10]/td[6]
+Sky Analytics
+//table[@aria-label='Employee Management System table']/tbody/tr[10]/td[7]
+ACTIVE

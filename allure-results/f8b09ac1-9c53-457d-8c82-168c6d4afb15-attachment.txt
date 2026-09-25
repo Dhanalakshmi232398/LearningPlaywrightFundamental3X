@@ -1,0 +1,20 @@
+//table[@aria-label='Employee Management System table']/tbody/tr[2]/td[1]
+
+//table[@aria-label='Employee Management System table']/tbody/tr[2]/td[2]
+Priya.Nair
+//table[@aria-label='Employee Management System table']/tbody/tr[2]/td[3]
+PN
+Priya Nair
+EMP-1002
+//table[@aria-label='Employee Management System table']/tbody/tr[2]/td[4]
+Product Owner
+//table[@aria-label='Employee Management System table']/tbody/tr[2]/td[5]
+Bengaluru
+//table[@aria-label='Employee Management System table']/tbody/tr[2]/td[6]
+Nimbus CRM
+//table[@aria-label='Employee Management System table']/tbody/tr[2]/td[7]
+ACTIVE
+//table[@aria-label='Employee Management System table']/tbody/tr[3]/td[1]
+
+//table[@aria-label='Employee Management System table']/tbody/tr[3]/td[2]
+Rohan.Mehta

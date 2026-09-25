@@ -1,0 +1,6 @@
+{
+  "runId": "20260925_202833",
+  "tests": {
+    "chromium › 07_WebTables\\24Sept_Task.spec.ts › Choose an element from the table and click the preceding checkbox": "failed"
+  }
+}
