@@ -1,0 +1,1071 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: 07_WebTables\26Sept_Task2.spec.ts >> Verifying DSLR details in Flipkart
+- Location: tests\07_WebTables\26Sept_Task2.spec.ts:19:5
+
+# Error details
+
+```
+TypeError: Cannot read properties of undefined (reading 'isDisabled')
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f2e3]:
+  - generic [ref=f2e7]:
+    - generic [ref=f2e9]:
+      - link [ref=f2e10] [cursor=pointer]:
+        - /url: /
+        - img "Flipkart" [ref=f2e11]
+      - link "Explore Plus" [ref=f2e12] [cursor=pointer]:
+        - /url: /plus
+    - generic [ref=f2e16]:
+      - textbox "Search for products, brands and more" [ref=f2e18]: DSLR Camera
+      - button [ref=f2e19] [cursor=pointer]
+    - link "Login" [ref=f2e28] [cursor=pointer]:
+      - /url: /login?ret=%2Fsearch%3Fq%3DDSLR%2BCamera%26otracker%3Dsearch%26otracker1%3Dsearch%26marketplace%3DFLIPKART%26as-show%3Doff%26as%3Doff%26page%3D2
+    - link "Become a Seller" [ref=f2e30] [cursor=pointer]:
+      - /url: https://seller.flipkart.com/sell-online/?utm_source=fkwebsite&utm_medium=websitedirect
+    - generic [ref=f2e32]: More
+    - link "Cart" [ref=f2e42] [cursor=pointer]:
+      - /url: /viewcart?exploreMode=true&preference=FLIPKART
+  - generic [ref=f2e49]:
+    - generic [ref=f2e50]:
+      - generic [ref=f2e52]:
+        - generic [ref=f2e54]:
+          - generic [ref=f2e55]: Filters
+          - generic [ref=f2e59]:
+            - generic [ref=f2e60]: CATEGORIES
+            - generic [ref=f2e62]:
+              - img [ref=f2e64] [cursor=pointer]
+              - link "Cameras & Accessories" [ref=f2e66] [cursor=pointer]:
+                - /url: /cameras-accessories/pr?sid=jek&q=DSLR+Camera&otracker=categorytree
+            - generic [ref=f2e68]:
+              - img [ref=f2e70] [cursor=pointer]
+              - link "Cameras" [ref=f2e72] [cursor=pointer]:
+                - /url: /cameras/pr?sid=jek,p31&q=DSLR+Camera&otracker=categorytree
+            - generic [ref=f2e74]:
+              - img [ref=f2e76] [cursor=pointer]
+              - link "DSLR & Mirrorless" [ref=f2e78] [cursor=pointer]:
+                - /url: /cameras/dslr-mirrorless/pr?sid=jek,p31,trv&q=DSLR+Camera&otracker=categorytree
+          - generic [ref=f2e79]: Brand
+          - generic [ref=f2e84]:
+            - generic [ref=f2e85]: Price
+            - generic [ref=f2e89]:
+              - generic [ref=f2e90] [cursor=pointer]
+              - generic [ref=f2e97]:
+                - generic [ref=f2e98]: .
+                - generic [ref=f2e99]: .
+                - generic [ref=f2e100]: .
+                - generic [ref=f2e101]: .
+                - generic [ref=f2e102]: .
+                - generic [ref=f2e103]: .
+                - generic: .
+            - generic [ref=f2e104]:
+              - combobox [ref=f2e106]:
+                - option "Min" [selected]
+                - option "5000"
+                - option "10000"
+                - option "20000"
+                - option "30000"
+                - option "50000"
+              - generic [ref=f2e107]: to
+              - combobox [ref=f2e109]:
+                - option "5000"
+                - option "10000"
+                - option "20000"
+                - option "30000"
+                - option "50000"
+                - option "50000+" [selected]
+          - generic [ref=f2e110]: Video Resolution
+          - generic [ref=f2e115]:
+            - generic [ref=f2e116] [cursor=pointer]: Customer Ratings
+            - generic [ref=f2e121]:
+              - generic "4★ & above" [ref=f2e122] [cursor=pointer]
+              - generic "3★ & above" [ref=f2e127] [cursor=pointer]
+              - generic "2★ & above" [ref=f2e132] [cursor=pointer]
+              - generic "1★ & above" [ref=f2e137] [cursor=pointer]
+          - generic [ref=f2e142]: Lens Mount
+          - generic [ref=f2e147]: Mega Pixel
+          - generic [ref=f2e152]: Effective Pixels
+          - generic [ref=f2e157]: Sensor Size
+          - generic [ref=f2e162]: Shutter Speed
+          - generic [ref=f2e167]: Type
+          - generic [ref=f2e172]: Color
+          - generic [ref=f2e177]: Discount
+          - generic [ref=f2e182]:
+            - generic [ref=f2e183] [cursor=pointer]
+            - generic [ref=f2e188]: "?"
+          - generic [ref=f2e190]: Number of Lens
+          - generic [ref=f2e195]: FPS in Burst Mode
+          - generic [ref=f2e200]: Country Of Origin
+          - generic [ref=f2e205]:
+            - generic [ref=f2e206] [cursor=pointer]: Offers
+            - generic [ref=f2e211]:
+              - generic "Buy More, Save More" [ref=f2e212] [cursor=pointer]
+              - generic "Special Price" [ref=f2e217] [cursor=pointer]
+          - generic [ref=f2e222]: Maximum ISO
+          - generic [ref=f2e227]: Maximum Shutter Speed
+          - generic [ref=f2e232]: Availability
+          - generic [ref=f2e237]: GST Invoice Available
+          - generic [ref=f2e242]: Features
+        - link "Need help? Help me decide Buying Guide" [ref=f2e248] [cursor=pointer]:
+          - /url: /buying-guide/dslr-camera?sid=jek,p31,trv&otracker=bg_from_browse_lhs
+          - generic [ref=f2e249]: Need help?
+          - generic [ref=f2e250]: Help me decide
+          - img "Buying Guide" [ref=f2e253]
+      - generic [ref=f2e254]:
+        - generic [ref=f2e257]:
+          - generic [ref=f2e258]:
+            - link "Home" [ref=f2e260] [cursor=pointer]:
+              - /url: /
+            - link "Cameras & Accessories" [ref=f2e264] [cursor=pointer]:
+              - /url: /cameras-accessories/pr?sid=jek&marketplace=FLIPKART
+            - link "Cameras" [ref=f2e268] [cursor=pointer]:
+              - /url: /cameras/pr?sid=jek,p31&marketplace=FLIPKART
+            - link "DSLR & Mirrorless" [ref=f2e272] [cursor=pointer]:
+              - /url: /cameras/dslr-mirrorless/pr?sid=jek,p31,trv&marketplace=FLIPKART
+          - generic [ref=f2e273]: Showing 25 – 48 of 147 results for "DSLR Camera"
+          - generic [ref=f2e274]:
+            - generic [ref=f2e275]: Sort By
+            - generic [ref=f2e276]: Relevance
+            - generic [ref=f2e277] [cursor=pointer]: Popularity
+            - generic [ref=f2e278] [cursor=pointer]: Price -- Low to High
+            - generic [ref=f2e279] [cursor=pointer]: Price -- High to Low
+            - generic [ref=f2e280] [cursor=pointer]: Newest First
+        - 'link "POZUB PUB-42WW NEW ARRIVAL Best Buy Strong Tripod stand + Dustproof Bag with Clip |Tripod stand mobile... Add to Compare POZUB PUB-42WW NEW ARRIVAL Best Buy Strong Tripod stand + Dustproof Bag with Clip |Tripod stand mobile... 3.6 37 Ratings & 3 Reviews • Effective Pixels: 0 MP • Optical Zoom: NA • Sensor Type: CCD | LCD Size: 0 inch • Max Shutter Speed: NA • NA ₹333 ₹700 52% off Only few left Bank Offer" [ref=f2e285] [cursor=pointer]':
+          - /url: /pozub-pub-42ww-new-arrival-best-buy-strong-tripod-stand-dustproof-bag-clip-tripod-mobile-phone-camera-gimbal-smartphone-multi-use-selfie-stick-desktop-online-course-video-recording-special-design-streaming-blogs-classes-presentation-creating-product-demos-vlog-video-blogging-gimbal-inmonopods-gimbal-stabilizer-gimbal-monopod-tripod-kit-intripod-ball-head-intripod-bracket-tripod-clamp-inmonopod-kit-in-holder-hand-classes-camera-stands-high-quality-tripod-monopod-monopod-bracket-head-abs-dslr/p/itm7691f7840e526?pid=CAMG6Q2YQQ7BJFRM&lid=LSTCAMG6Q2YQQ7BJFRMESJEFD&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_25&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.CAMG6Q2YQQ7BJFRM.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - generic [ref=f2e286]:
+            - img "POZUB PUB-42WW NEW ARRIVAL Best Buy Strong Tripod stand + Dustproof Bag with Clip |Tripod stand mobile..." [ref=f2e290]
+            - generic [ref=f2e291]: Add to Compare
+          - generic [ref=f2e301]:
+            - generic [ref=f2e302]:
+              - generic [ref=f2e303]: POZUB PUB-42WW NEW ARRIVAL Best Buy Strong Tripod stand + Dustproof Bag with Clip |Tripod stand mobile...
+              - generic [ref=f2e304]:
+                - generic [ref=f2e305]: "3.6"
+                - generic [ref=f2e308]: 37 Ratings & 3 Reviews
+              - list [ref=f2e311]:
+                - listitem [ref=f2e312]: "• Effective Pixels: 0 MP"
+                - listitem [ref=f2e313]: "• Optical Zoom: NA"
+                - listitem [ref=f2e314]: "• Sensor Type: CCD | LCD Size: 0 inch"
+                - listitem [ref=f2e315]: "• Max Shutter Speed: NA"
+                - listitem [ref=f2e316]: • NA
+            - generic [ref=f2e317]:
+              - generic [ref=f2e319]:
+                - generic [ref=f2e320]: ₹333
+                - generic [ref=f2e321]: ₹700
+                - generic [ref=f2e322]: 52% off
+              - generic [ref=f2e325]: Only few left
+              - generic [ref=f2e328]: Bank Offer
+        - 'link "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera • Effective Pixels: 13 MP • Sensor Type: CCD • Best Quality • 0 ₹617 ₹1,599 61% off Bank Offer" [ref=f2e335] [cursor=pointer]':
+          - /url: /buyluxe-camera-kids-hd-video-recording-selfie-games-dslr-pink/p/itm8576d70760839?pid=DLLHN3ZY9SB3MJA5&lid=LSTDLLHN3ZY9SB3MJA51ITELD&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_26&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLHN3ZY9SB3MJA5.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera" [ref=f2e340]
+          - generic [ref=f2e345]:
+            - generic [ref=f2e346]:
+              - generic [ref=f2e347]: BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera
+              - list [ref=f2e349]:
+                - listitem [ref=f2e350]: "• Effective Pixels: 13 MP"
+                - listitem [ref=f2e351]: "• Sensor Type: CCD"
+                - listitem [ref=f2e352]: • Best Quality
+                - listitem [ref=f2e353]: • 0
+            - generic [ref=f2e354]:
+              - generic [ref=f2e356]:
+                - generic [ref=f2e357]: ₹617
+                - generic [ref=f2e358]: ₹1,599
+                - generic [ref=f2e359]: 61% off
+              - generic [ref=f2e362]: Bank Offer
+        - 'link "SONY ILCE-6100X Mirrorless Camera Body with with SELP16502 & SEL55210 SONY ILCE-6100X Mirrorless Camera Body with with SELP16502 & SEL55210 4.6 403 Ratings & 62 Reviews • Effective Pixels: 24.2 MP • Sensor Type: CMOS • WiFi Available • 4K • 2 Year Standard Warranty + 1 Year Extended warranty on Registeration on Alpha Community ₹75,490 ₹89,990 16% off Upto ₹60,650 Off on Exchange Bank Offer" [ref=f2e369] [cursor=pointer]':
+          - /url: /sony-ilce-6100x-mirrorless-camera-body-selp16502-sel55210/p/itm9d07ee972eeb8?pid=DLLH8PFFVWGQ4GYE&lid=LSTDLLH8PFFVWGQ4GYEQB683E&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_27&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLH8PFFVWGQ4GYE.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "SONY ILCE-6100X Mirrorless Camera Body with with SELP16502 & SEL55210" [ref=f2e374]
+          - generic [ref=f2e379]:
+            - generic [ref=f2e380]:
+              - generic [ref=f2e381]: SONY ILCE-6100X Mirrorless Camera Body with with SELP16502 & SEL55210
+              - generic [ref=f2e382]:
+                - generic [ref=f2e383]: "4.6"
+                - generic [ref=f2e386]: 403 Ratings & 62 Reviews
+              - list [ref=f2e389]:
+                - listitem [ref=f2e390]: "• Effective Pixels: 24.2 MP"
+                - listitem [ref=f2e391]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e392]: • WiFi Available
+                - listitem [ref=f2e393]: • 4K
+                - listitem [ref=f2e394]: • 2 Year Standard Warranty + 1 Year Extended warranty on Registeration on Alpha Community
+            - generic [ref=f2e395]:
+              - generic [ref=f2e397]:
+                - generic [ref=f2e398]: ₹75,490
+                - generic [ref=f2e399]: ₹89,990
+                - generic [ref=f2e400]: 16% off
+              - generic [ref=f2e404]:
+                - generic [ref=f2e405]: Upto
+                - generic [ref=f2e406]: ₹60,650
+                - generic [ref=f2e407]: Off on Exchange
+              - generic [ref=f2e408]: Bank Offer
+        - 'link "KMUYO 6 PACK OF 2 4G VIDEO CAMERA DSLR Camera IP Camera KMUYO 6 PACK OF 2 4G VIDEO CAMERA DSLR Camera IP Camera • Effective Pixels: 12 MP • Sensor Type: CMOS • WiFi Available • HD, FULL HD • https://fkmpimages.flixcart.com/iu-pre-catalog-images-feed/1762776099095-91779c6cd82746fc-FBCF0EA5EBA987F2717768D19F1C8C20 ₹5,248 ₹8,000 34% off Only few left Bank Offer" [ref=f2e415] [cursor=pointer]':
+          - /url: /kmuyo-6-pack-2-4g-video-camera-dslr-ip/p/itmea0127047cfd7?pid=DLLHZGYKCXQDFMAM&lid=LSTDLLHZGYKCXQDFMAMWUFNLI&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_28&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLHZGYKCXQDFMAM.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "KMUYO 6 PACK OF 2 4G VIDEO CAMERA DSLR Camera IP Camera" [ref=f2e420]
+          - generic [ref=f2e425]:
+            - generic [ref=f2e426]:
+              - generic [ref=f2e427]: KMUYO 6 PACK OF 2 4G VIDEO CAMERA DSLR Camera IP Camera
+              - list [ref=f2e429]:
+                - listitem [ref=f2e430]: "• Effective Pixels: 12 MP"
+                - listitem [ref=f2e431]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e432]: • WiFi Available
+                - listitem [ref=f2e433]: • HD, FULL HD
+                - listitem [ref=f2e434]: • https://fkmpimages.flixcart.com/iu-pre-catalog-images-feed/1762776099095-91779c6cd82746fc-FBCF0EA5EBA987F2717768D19F1C8C20
+            - generic [ref=f2e435]:
+              - generic [ref=f2e437]:
+                - generic [ref=f2e438]: ₹5,248
+                - generic [ref=f2e439]: ₹8,000
+                - generic [ref=f2e440]: 34% off
+              - generic [ref=f2e441]: Only few left
+              - generic [ref=f2e444]: Bank Offer
+        - 'link "KMUYO 6 DUAL LENS MINI PTZ DSLR Camera IP Camera KMUYO 6 DUAL LENS MINI PTZ DSLR Camera IP Camera • Effective Pixels: 12 MP • Sensor Type: CMOS • WiFi Available • HD, FULL HD • 1 Year Warranty From The Date Delivery against any manufacturing Defects In Material And Workmanship. Note warranty terms- - Battery carries only 6 months warranty - No warranty for Accessories, cables or Tools supplied - Warranty Does Not Cover Damages Rr by asking the customer to bring the product at a certain Service Centeretc. ₹2,092 ₹6,000 65% off Bank Offer" [ref=f2e451] [cursor=pointer]':
+          - /url: /kmuyo-6-dual-lens-mini-ptz-dslr-camera-ip/p/itmc1dc00af6a0db?pid=DLLHZGYJQHJFGAQW&lid=LSTDLLHZGYJQHJFGAQW0FUVS1&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_29&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLHZGYJQHJFGAQW.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "KMUYO 6 DUAL LENS MINI PTZ DSLR Camera IP Camera" [ref=f2e456]
+          - generic [ref=f2e461]:
+            - generic [ref=f2e462]:
+              - generic [ref=f2e463]: KMUYO 6 DUAL LENS MINI PTZ DSLR Camera IP Camera
+              - list [ref=f2e465]:
+                - listitem [ref=f2e466]: "• Effective Pixels: 12 MP"
+                - listitem [ref=f2e467]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e468]: • WiFi Available
+                - listitem [ref=f2e469]: • HD, FULL HD
+                - listitem [ref=f2e470]: • 1 Year Warranty From The Date Delivery against any manufacturing Defects In Material And Workmanship. Note warranty terms- - Battery carries only 6 months warranty - No warranty for Accessories, cables or Tools supplied - Warranty Does Not Cover Damages Rr by asking the customer to bring the product at a certain Service Centeretc.
+            - generic [ref=f2e471]:
+              - generic [ref=f2e473]:
+                - generic [ref=f2e474]: ₹2,092
+                - generic [ref=f2e475]: ₹6,000
+                - generic [ref=f2e476]: 65% off
+              - generic [ref=f2e477]: Bank Offer
+        - 'link "KMUYO 6 SPY USB HUB CAMERA DSLR Camera IP Camera KMUYO 6 SPY USB HUB CAMERA DSLR Camera IP Camera • Effective Pixels: 12 MP • Sensor Type: CMOS • WiFi Available • HD, FULL HD • https://fkmpimages.flixcart.com/iu-pre-catalog-images-feed/1762170423616-91779c6cd82746fc-A114105C5FDFF147654C6B5D74A4B441 ₹4,733 ₹8,000 40% off Only few left Bank Offer" [ref=f2e484] [cursor=pointer]':
+          - /url: /kmuyo-6-spy-usb-hub-camera-dslr-ip/p/itm6bbbe4019d65c?pid=DLLHZGYJUBNFXBFW&lid=LSTDLLHZGYJUBNFXBFW3HENRS&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_30&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLHZGYJUBNFXBFW.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "KMUYO 6 SPY USB HUB CAMERA DSLR Camera IP Camera" [ref=f2e489]
+          - generic [ref=f2e494]:
+            - generic [ref=f2e495]:
+              - generic [ref=f2e496]: KMUYO 6 SPY USB HUB CAMERA DSLR Camera IP Camera
+              - list [ref=f2e498]:
+                - listitem [ref=f2e499]: "• Effective Pixels: 12 MP"
+                - listitem [ref=f2e500]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e501]: • WiFi Available
+                - listitem [ref=f2e502]: • HD, FULL HD
+                - listitem [ref=f2e503]: • https://fkmpimages.flixcart.com/iu-pre-catalog-images-feed/1762170423616-91779c6cd82746fc-A114105C5FDFF147654C6B5D74A4B441
+            - generic [ref=f2e504]:
+              - generic [ref=f2e506]:
+                - generic [ref=f2e507]: ₹4,733
+                - generic [ref=f2e508]: ₹8,000
+                - generic [ref=f2e509]: 40% off
+              - generic [ref=f2e510]: Only few left
+              - generic [ref=f2e513]: Bank Offer
+        - link [ref=f2e520] [cursor=pointer]:
+          - /url: /sony-alpha-ilce-6400m-b-in5-mirrorless-camera-18-135-mm-zoom-lens-featuring-eye-af-4k-movie-recording/p/itm8bb8f94012e57?pid=DLLFDJ8AHYXPQKRG&lid=LSTDLLFDJ8AHYXPQKRG24MZAB&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_31&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLFDJ8AHYXPQKRG.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "SONY Alpha ILCE-6400M/B IN5 Mirrorless Camera with 18-135 mm Zoom Lens Featuring Eye AF and 4K movie r..." [ref=f2e525]
+          - generic [ref=f2e530]:
+            - generic [ref=f2e531]:
+              - generic [ref=f2e532]: SONY Alpha ILCE-6400M/B IN5 Mirrorless Camera with 18-135 mm Zoom Lens Featuring Eye AF and 4K movie r...
+              - generic [ref=f2e533]:
+                - generic [ref=f2e534]: "4.6"
+                - generic [ref=f2e537]: 1,282 Ratings & 153 Reviews
+              - list [ref=f2e540]:
+                - listitem [ref=f2e541]: • 4K movies and pro-level features, Natural-looking images that match what you see, Cleaner images even in dim light, Creative movie production, High-resolution 4K recording, Create time-lapse movies, Vlog with useful features, Take advantage of various movie functions, A high resolution LCD monitor with handy touchscreen functions, Incredible image quality, Sophisticated eye recognition and tracking, Persistent tracking ability, High speed continuous shooting with AF/AE tracking, Bluetooth & NFC, Touch Screen
+                - listitem [ref=f2e542]: "• Effective Pixels: 24.2 MP"
+                - listitem [ref=f2e543]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e544]: • WiFi Available
+                - listitem [ref=f2e545]: • 4K
+                - listitem [ref=f2e546]: • 2 Year Warranty
+            - generic [ref=f2e547]:
+              - generic [ref=f2e549]:
+                - generic [ref=f2e550]: ₹87,490
+                - generic [ref=f2e551]: ₹1,16,490
+                - generic [ref=f2e552]: 24% off
+              - generic [ref=f2e556]:
+                - generic [ref=f2e557]: Upto
+                - generic [ref=f2e558]: ₹60,650
+                - generic [ref=f2e559]: Off on Exchange
+              - generic [ref=f2e560]: Bank Offer
+        - 'link "KMUYO 6 BAT PEN CAMERA DSLR Camera IP Camera KMUYO 6 BAT PEN CAMERA DSLR Camera IP Camera • Effective Pixels: 12 MP • Sensor Type: CMOS • HD, FULL HD • https://fkmpimages.flixcart.com/iu-pre-catalog-images-feed/1762168802537-91779c6cd82746fc-7FA20C0E524EF9736B6AD81284879B61 ₹2,092 ₹4,000 47% off Only few left Bank Offer" [ref=f2e567] [cursor=pointer]':
+          - /url: /kmuyo-6-bat-pen-camera-dslr-ip/p/itmd6ba5f0f28937?pid=DLLHZGYF4AHFZWBE&lid=LSTDLLHZGYF4AHFZWBEIXCVZE&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_32&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLHZGYF4AHFZWBE.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "KMUYO 6 BAT PEN CAMERA DSLR Camera IP Camera" [ref=f2e572]
+          - generic [ref=f2e577]:
+            - generic [ref=f2e578]:
+              - generic [ref=f2e579]: KMUYO 6 BAT PEN CAMERA DSLR Camera IP Camera
+              - list [ref=f2e581]:
+                - listitem [ref=f2e582]: "• Effective Pixels: 12 MP"
+                - listitem [ref=f2e583]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e584]: • HD, FULL HD
+                - listitem [ref=f2e585]: • https://fkmpimages.flixcart.com/iu-pre-catalog-images-feed/1762168802537-91779c6cd82746fc-7FA20C0E524EF9736B6AD81284879B61
+            - generic [ref=f2e586]:
+              - generic [ref=f2e588]:
+                - generic [ref=f2e589]: ₹2,092
+                - generic [ref=f2e590]: ₹4,000
+                - generic [ref=f2e591]: 47% off
+              - generic [ref=f2e592]: Only few left
+              - generic [ref=f2e595]: Bank Offer
+        - 'link "SONY Alpha ZV-E10K Mirrorless Camera Body with 16-50mm Zoom Lens 24.2 MP APS-C Sensor,Designed for eas... SONY Alpha ZV-E10K Mirrorless Camera Body with 16-50mm Zoom Lens 24.2 MP APS-C Sensor,Designed for eas... 4.5 132 Ratings & 42 Reviews • APS-C format Exmor R CMOS sensor with 26.0 megapixels, BIONZ XR image processing engine for stunning 4K footage at up to 60p, Creative Look and Cinematic Vlog Setting for greater expressive freedom, 2+1 Year Extended warranty on registration on Alpha Community, Intuitive UI, vertical shooting and 5 GHz connectivity for simple sharing, High battery capacity for extended shooting • Effective Pixels: 24.2 MP • Sensor Type: CMOS • 4K UHD • 2 Year Warranty on Product ₹63,990 ₹69,990 8% off Bank Offer" [ref=f2e602] [cursor=pointer]':
+          - /url: /sony-alpha-zv-e10k-mirrorless-camera-body-16-50mm-zoom-lens-24-2-mp-aps-c-sensor-designed-easy-selfie-vlog-shoots/p/itm4f2a3940ed8b5?pid=DLLHP4UWMFBDGN3Z&lid=LSTDLLHP4UWMFBDGN3ZLZGQSJ&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_33&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLHP4UWMFBDGN3Z.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "SONY Alpha ZV-E10K Mirrorless Camera Body with 16-50mm Zoom Lens 24.2 MP APS-C Sensor,Designed for eas..." [ref=f2e607]
+          - generic [ref=f2e612]:
+            - generic [ref=f2e613]:
+              - generic [ref=f2e614]: SONY Alpha ZV-E10K Mirrorless Camera Body with 16-50mm Zoom Lens 24.2 MP APS-C Sensor,Designed for eas...
+              - generic [ref=f2e615]:
+                - generic [ref=f2e616]: "4.5"
+                - generic [ref=f2e619]: 132 Ratings & 42 Reviews
+              - list [ref=f2e622]:
+                - listitem [ref=f2e623]: • APS-C format Exmor R CMOS sensor with 26.0 megapixels, BIONZ XR image processing engine for stunning 4K footage at up to 60p, Creative Look and Cinematic Vlog Setting for greater expressive freedom, 2+1 Year Extended warranty on registration on Alpha Community, Intuitive UI, vertical shooting and 5 GHz connectivity for simple sharing, High battery capacity for extended shooting
+                - listitem [ref=f2e624]: "• Effective Pixels: 24.2 MP"
+                - listitem [ref=f2e625]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e626]: • 4K UHD
+                - listitem [ref=f2e627]: • 2 Year Warranty on Product
+            - generic [ref=f2e628]:
+              - generic [ref=f2e630]:
+                - generic [ref=f2e631]: ₹63,990
+                - generic [ref=f2e632]: ₹69,990
+                - generic [ref=f2e633]: 8% off
+              - generic [ref=f2e634]: Bank Offer
+        - 'link "SONY Alpha 80850820 Mirrorless Camera Body Only Full-Frame, High-resolution 68.8MP Camera, 30 fps SONY Alpha 80850820 Mirrorless Camera Body Only Full-Frame, High-resolution 68.8MP Camera, 30 fps • Effective Pixels: 66.8 MP • Sensor Type: CMOS • WiFi Available • 4K • 3 Years warranty on product ₹4,70,990 Only 1 left Bank Offer" [ref=f2e641] [cursor=pointer]':
+          - /url: /sony-alpha-80850820-mirrorless-camera-body-only-full-frame-high-resolution-68-8mp-camera-30-fps/p/itme00215db10eb0?pid=DLLHPHBZSGUHHAXF&lid=LSTDLLHPHBZSGUHHAXFVNWXMP&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_34&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLHPHBZSGUHHAXF.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "SONY Alpha 80850820 Mirrorless Camera Body Only Full-Frame, High-resolution 68.8MP Camera, 30 fps" [ref=f2e646]
+          - generic [ref=f2e651]:
+            - generic [ref=f2e652]:
+              - generic [ref=f2e653]: SONY Alpha 80850820 Mirrorless Camera Body Only Full-Frame, High-resolution 68.8MP Camera, 30 fps
+              - list [ref=f2e655]:
+                - listitem [ref=f2e656]: "• Effective Pixels: 66.8 MP"
+                - listitem [ref=f2e657]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e658]: • WiFi Available
+                - listitem [ref=f2e659]: • 4K
+                - listitem [ref=f2e660]: • 3 Years warranty on product
+            - generic [ref=f2e661]:
+              - generic [ref=f2e662]: ₹4,70,990
+              - generic [ref=f2e665]: Only 1 left
+              - generic [ref=f2e668]: Bank Offer
+        - 'link "SONY Alpha ILCE-6600 APS-C Mirrorless Camera Body Only Featuring Eye AF and 4K movie recording SONY Alpha ILCE-6600 APS-C Mirrorless Camera Body Only Featuring Eye AF and 4K movie recording 4.6 1,367 Ratings & 152 Reviews • 4K HDR (HLG)2 movie shooting, Ultra-fast AF and continuous shooting, Real-time Tracking and Real-time Eye AF, 5-axis optical image stabilisation, Magnificent images, True-to-life 4K HDR (HLG) movie recording, Powerful, reliable, versatile, Fast continuous shooting with AF/AE at up to 11fps, AI-based subject tracking, Initiate tracking in an instant, Smooth focus transition, Real-time Tracking activation with Touch Tracking, Wi-Fi,NFC & BLUETOOTH • Effective Pixels: 24.2 MP • Sensor Type: CMOS • WiFi Available • UHD 4K • 2 Year Warranty ₹62,990 ₹1,24,990 49% off Upto ₹50,250 Off on Exchange Bank Offer" [ref=f2e675] [cursor=pointer]':
+          - /url: /sony-alpha-ilce-6600-aps-c-mirrorless-camera-body-only-featuring-eye-af-4k-movie-recording/p/itm89eae17a86b50?pid=CAMFM67HCQNAZ79U&lid=LSTCAMFM67HCQNAZ79UDDYKNV&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_35&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.CAMFM67HCQNAZ79U.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "SONY Alpha ILCE-6600 APS-C Mirrorless Camera Body Only Featuring Eye AF and 4K movie recording" [ref=f2e680]
+          - generic [ref=f2e685]:
+            - generic [ref=f2e686]:
+              - generic [ref=f2e687]: SONY Alpha ILCE-6600 APS-C Mirrorless Camera Body Only Featuring Eye AF and 4K movie recording
+              - generic [ref=f2e688]:
+                - generic [ref=f2e689]: "4.6"
+                - generic [ref=f2e692]: 1,367 Ratings & 152 Reviews
+              - list [ref=f2e695]:
+                - listitem [ref=f2e696]: • 4K HDR (HLG)2 movie shooting, Ultra-fast AF and continuous shooting, Real-time Tracking and Real-time Eye AF, 5-axis optical image stabilisation, Magnificent images, True-to-life 4K HDR (HLG) movie recording, Powerful, reliable, versatile, Fast continuous shooting with AF/AE at up to 11fps, AI-based subject tracking, Initiate tracking in an instant, Smooth focus transition, Real-time Tracking activation with Touch Tracking, Wi-Fi,NFC & BLUETOOTH
+                - listitem [ref=f2e697]: "• Effective Pixels: 24.2 MP"
+                - listitem [ref=f2e698]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e699]: • WiFi Available
+                - listitem [ref=f2e700]: • UHD 4K
+                - listitem [ref=f2e701]: • 2 Year Warranty
+            - generic [ref=f2e702]:
+              - generic [ref=f2e704]:
+                - generic [ref=f2e705]: ₹62,990
+                - generic [ref=f2e706]: ₹1,24,990
+                - generic [ref=f2e707]: 49% off
+              - generic [ref=f2e711]:
+                - generic [ref=f2e712]: Upto
+                - generic [ref=f2e713]: ₹50,250
+                - generic [ref=f2e714]: Off on Exchange
+              - generic [ref=f2e715]: Bank Offer
+        - 'link "NIKON D850 DSLR Camera 24-120 mm VR Lens NIKON D850 DSLR Camera 24-120 mm VR Lens 4.7 19 Ratings & 2 Reviews • 4K UHD Full Frame, Higher Resolution. Faster Speed. Greater Versatility., Fast continuous shooting, flagship autofocus and precise metering., 153 Point AF System, Autofocus Down to -4 EV, Speed to Match Your Vision, A Multimedia Powerhouse., Focus Peaking, Selectable Highlight Detection, TOUCH MONITOR Tilt and Touch, FOCUS STACKING, XQD Storage, Built-in Wireless Connectivity, Designed to Outperform., Phenomenal Battery Performance, Withstand the Elements, Extreme resolution meets extreme speed. • Effective Pixels: 45.7 MP • Sensor Type: CMOS • WiFi Available • 4K at 30p+1080p at 120p+Time-Lapse • 2 Years Warranty ₹2,49,990 ₹2,71,950 8% off Only 1 left Upto ₹61,650 Off on Exchange" [ref=f2e722] [cursor=pointer]':
+          - /url: /nikon-d850-dslr-camera-24-120-mm-vr-lens/p/itm67c14d9671985?pid=DLLF65NSDKTU7TCA&lid=LSTDLLF65NSDKTU7TCALQIUCY&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_36&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLF65NSDKTU7TCA.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "NIKON D850 DSLR Camera 24-120 mm VR Lens" [ref=f2e727]
+          - generic [ref=f2e732]:
+            - generic [ref=f2e733]:
+              - generic [ref=f2e734]: NIKON D850 DSLR Camera 24-120 mm VR Lens
+              - generic [ref=f2e735]:
+                - generic [ref=f2e736]: "4.7"
+                - generic [ref=f2e739]: 19 Ratings & 2 Reviews
+              - list [ref=f2e742]:
+                - listitem [ref=f2e743]: • 4K UHD Full Frame, Higher Resolution. Faster Speed. Greater Versatility., Fast continuous shooting, flagship autofocus and precise metering., 153 Point AF System, Autofocus Down to -4 EV, Speed to Match Your Vision, A Multimedia Powerhouse., Focus Peaking, Selectable Highlight Detection, TOUCH MONITOR Tilt and Touch, FOCUS STACKING, XQD Storage, Built-in Wireless Connectivity, Designed to Outperform., Phenomenal Battery Performance, Withstand the Elements, Extreme resolution meets extreme speed.
+                - listitem [ref=f2e744]: "• Effective Pixels: 45.7 MP"
+                - listitem [ref=f2e745]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e746]: • WiFi Available
+                - listitem [ref=f2e747]: • 4K at 30p+1080p at 120p+Time-Lapse
+                - listitem [ref=f2e748]: • 2 Years Warranty
+            - generic [ref=f2e749]:
+              - generic [ref=f2e751]:
+                - generic [ref=f2e752]: ₹2,49,990
+                - generic [ref=f2e753]: ₹2,71,950
+                - generic [ref=f2e754]: 8% off
+              - generic [ref=f2e757]: Only 1 left
+              - generic [ref=f2e761]:
+                - generic [ref=f2e762]: Upto
+                - generic [ref=f2e763]: ₹61,650
+                - generic [ref=f2e764]: Off on Exchange
+        - link [ref=f2e769] [cursor=pointer]:
+          - /url: /nikon-d780-dslr-camera-body-24-120-mm/p/itm5d7abc336a7ec?pid=DLLFPYHHSKNEFPCE&lid=LSTDLLFPYHHSKNEFPCEZHB13E&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_37&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLFPYHHSKNEFPCE.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "NIKON D780 DSLR Camera Body with 24-120 mm" [ref=f2e774]
+          - generic [ref=f2e779]:
+            - generic [ref=f2e780]:
+              - generic [ref=f2e781]: NIKON D780 DSLR Camera Body with 24-120 mm
+              - generic [ref=f2e782]:
+                - generic [ref=f2e783]: "3.9"
+                - generic [ref=f2e786]: 7 Ratings & 0 Reviews
+              - list [ref=f2e789]:
+                - listitem [ref=f2e790]: • 4K UHD, Versatility meets agility., Impeccable image quality with dazzling detail., AF breakthroughs for stills and video., A huge leap in cinematic technology for DSLR lovers., Source detail retention with 10-Bit N-Log or new HDR (HLG)., Built-in timecode., Eye-catching AF., Disruption-free silent shooting at 12 FPS., Tilt, touch, swipe, pinch., Time-bending long exposures. No Remote Necessary., A Breakthrough in low light., Highly-refined scene recognition., Style-defining creative filters., Special effects with a safety net., Flexible time-lapse options., Multiple ways to create multiple exposures., Focus stacking made easy.
+                - listitem [ref=f2e791]: "• Effective Pixels: 18 MP"
+                - listitem [ref=f2e792]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e793]: • WiFi Available
+                - listitem [ref=f2e794]: • 4k
+                - listitem [ref=f2e795]: • 2 Year Warranty
+            - generic [ref=f2e796]:
+              - generic [ref=f2e798]:
+                - generic [ref=f2e799]: ₹1,49,390
+                - generic [ref=f2e800]: ₹2,35,995
+                - generic [ref=f2e801]: 36% off
+              - generic [ref=f2e804]: Only 2 left
+              - generic [ref=f2e808]:
+                - generic [ref=f2e809]: Upto
+                - generic [ref=f2e810]: ₹60,650
+                - generic [ref=f2e811]: Off on Exchange
+        - 'link "NIKON D780 DSLR Camera Body Only NIKON D780 DSLR Camera Body Only 3.9 7 Ratings & 0 Reviews • 4K UHD, Versatility meets agility., Impeccable image quality with dazzling detail., AF breakthroughs for stills and video., A huge leap in cinematic technology for DSLR lovers., Source detail retention with 10-Bit N-Log or new HDR (HLG)., Built-in timecode., Eye-catching AF., Disruption-free silent shooting at 12 FPS., Tilt, touch, swipe, pinch., Time-bending long exposures. No Remote Necessary., A Breakthrough in low light., Highly-refined scene recognition., Style-defining creative filters., Special effects with a safety net., Flexible time-lapse options., Multiple ways to create multiple exposures., Focus stacking made easy. • Effective Pixels: 18 MP • Sensor Type: CMOS • WiFi Available • 4k • 2 Years Limited Warranty ₹1,12,099 ₹1,95,995 42% off Only 1 left Upto ₹60,650 Off on Exchange" [ref=f2e816] [cursor=pointer]':
+          - /url: /nikon-d780-dslr-camera-body-only/p/itm87bdc94f7e309?pid=DLLFPYHHQ4T2DMQV&lid=LSTDLLFPYHHQ4T2DMQVKBGH3F&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_38&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLFPYHHQ4T2DMQV.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "NIKON D780 DSLR Camera Body Only" [ref=f2e821]
+          - generic [ref=f2e826]:
+            - generic [ref=f2e827]:
+              - generic [ref=f2e828]: NIKON D780 DSLR Camera Body Only
+              - generic [ref=f2e829]:
+                - generic [ref=f2e830]: "3.9"
+                - generic [ref=f2e833]: 7 Ratings & 0 Reviews
+              - list [ref=f2e836]:
+                - listitem [ref=f2e837]: • 4K UHD, Versatility meets agility., Impeccable image quality with dazzling detail., AF breakthroughs for stills and video., A huge leap in cinematic technology for DSLR lovers., Source detail retention with 10-Bit N-Log or new HDR (HLG)., Built-in timecode., Eye-catching AF., Disruption-free silent shooting at 12 FPS., Tilt, touch, swipe, pinch., Time-bending long exposures. No Remote Necessary., A Breakthrough in low light., Highly-refined scene recognition., Style-defining creative filters., Special effects with a safety net., Flexible time-lapse options., Multiple ways to create multiple exposures., Focus stacking made easy.
+                - listitem [ref=f2e838]: "• Effective Pixels: 18 MP"
+                - listitem [ref=f2e839]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e840]: • WiFi Available
+                - listitem [ref=f2e841]: • 4k
+                - listitem [ref=f2e842]: • 2 Years Limited Warranty
+            - generic [ref=f2e843]:
+              - generic [ref=f2e845]:
+                - generic [ref=f2e846]: ₹1,12,099
+                - generic [ref=f2e847]: ₹1,95,995
+                - generic [ref=f2e848]: 42% off
+              - generic [ref=f2e851]: Only 1 left
+              - generic [ref=f2e855]:
+                - generic [ref=f2e856]: Upto
+                - generic [ref=f2e857]: ₹60,650
+                - generic [ref=f2e858]: Off on Exchange
+        - 'link "NIKON Z50 II Mirrorless Camera Body with 16-50 Lens NIKON Z50 II Mirrorless Camera Body with 16-50 Lens 4.6 107 Ratings & 21 Reviews • Effective Pixels: 20.9 MP • Sensor Type: CMOS • WiFi Available • 4K • 2 Years Warranty ₹91,645 Upto ₹60,150 Off on Exchange Bank Offer" [ref=f2e863] [cursor=pointer]':
+          - /url: /nikon-z50-ii-mirrorless-camera-body-16-50-lens/p/itmdc64017735260?pid=DLLH6GPQQTCPQJ4Q&lid=LSTDLLH6GPQQTCPQJ4QMKNHS0&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_39&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLH6GPQQTCPQJ4Q.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "NIKON Z50 II Mirrorless Camera Body with 16-50 Lens" [ref=f2e868]
+          - generic [ref=f2e873]:
+            - generic [ref=f2e874]:
+              - generic [ref=f2e875]: NIKON Z50 II Mirrorless Camera Body with 16-50 Lens
+              - generic [ref=f2e876]:
+                - generic [ref=f2e877]: "4.6"
+                - generic [ref=f2e880]: 107 Ratings & 21 Reviews
+              - list [ref=f2e883]:
+                - listitem [ref=f2e884]: "• Effective Pixels: 20.9 MP"
+                - listitem [ref=f2e885]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e886]: • WiFi Available
+                - listitem [ref=f2e887]: • 4K
+                - listitem [ref=f2e888]: • 2 Years Warranty
+            - generic [ref=f2e889]:
+              - generic [ref=f2e890]: ₹91,645
+              - generic [ref=f2e896]:
+                - generic [ref=f2e897]: Upto
+                - generic [ref=f2e898]: ₹60,150
+                - generic [ref=f2e899]: Off on Exchange
+              - generic [ref=f2e900]: Bank Offer
+        - 'link "BuyLuxe Mini Digital Camera for Kids for Girls and Boys | Gift for Young Children 13MP DSLR Camera Add to Compare BuyLuxe Mini Digital Camera for Kids for Girls and Boys | Gift for Young Children 13MP DSLR Camera 3.3 60 Ratings & 5 Reviews • Effective Pixels: 13 MP • Optical Zoom: 0 • Sensor Type: CCD | LCD Size: 0 inch • Max Shutter Speed: 0 • 0 ₹538 ₹1,997 73% off Bank Offer" [ref=f2e907] [cursor=pointer]':
+          - /url: /buyluxe-mini-digital-camera-kids-girls-boys-gift-young-children-13mp-dslr/p/itm316d68b1bd03c?pid=CAMHKVKTZFH5KG4E&lid=LSTCAMHKVKTZFH5KG4E6XBVLA&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_40&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.CAMHKVKTZFH5KG4E.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - generic [ref=f2e908]:
+            - img "BuyLuxe Mini Digital Camera for Kids for Girls and Boys | Gift for Young Children 13MP DSLR Camera" [ref=f2e912]
+            - generic [ref=f2e913]: Add to Compare
+          - generic [ref=f2e923]:
+            - generic [ref=f2e924]:
+              - generic [ref=f2e925]: BuyLuxe Mini Digital Camera for Kids for Girls and Boys | Gift for Young Children 13MP DSLR Camera
+              - generic [ref=f2e926]:
+                - generic [ref=f2e927]: "3.3"
+                - generic [ref=f2e930]: 60 Ratings & 5 Reviews
+              - list [ref=f2e933]:
+                - listitem [ref=f2e934]: "• Effective Pixels: 13 MP"
+                - listitem [ref=f2e935]: "• Optical Zoom: 0"
+                - listitem [ref=f2e936]: "• Sensor Type: CCD | LCD Size: 0 inch"
+                - listitem [ref=f2e937]: "• Max Shutter Speed: 0"
+                - listitem [ref=f2e938]: • 0
+            - generic [ref=f2e939]:
+              - generic [ref=f2e941]:
+                - generic [ref=f2e942]: ₹538
+                - generic [ref=f2e943]: ₹1,997
+                - generic [ref=f2e944]: 73% off
+              - generic [ref=f2e945]: Bank Offer
+        - 'link "Canon EOS R100 Mirrorless Camera RF-S 18-45mm f/4.5-6.3 IS STM Canon EOS R100 Mirrorless Camera RF-S 18-45mm f/4.5-6.3 IS STM 4.4 2,079 Ratings & 203 Reviews • DIGIC 8 Image Processor, 4K 24p Video with Crop, Full HD 60p, Dual Pixel CMOS AF with 143 AF Zones, 6.5 fps Electronic Shutter, 2.36m-Dot OLED EVF, 3\" 1.04m-Dot LCD Screen, Creative Assist Mode, Silent Mode for Quiet Operation, Bluetooth with SD Card Slot • Effective Pixels: 24.1 MP • Sensor Type: CMOS • WiFi Available • 4K • 2 Years Warranty ₹48,460 ₹64,995 25% off Upto ₹38,800 Off on Exchange Bank Offer" [ref=f2e952] [cursor=pointer]':
+          - /url: /canon-eos-r100-mirrorless-camera-rf-s-18-45mm-f-4-5-6-3-stm/p/itm3bc65ea11d81b?pid=DLLGQAQYNT39ZJTG&lid=LSTDLLGQAQYNT39ZJTGWF2CZS&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_41&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLGQAQYNT39ZJTG.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "Canon EOS R100 Mirrorless Camera RF-S 18-45mm f/4.5-6.3 IS STM" [ref=f2e957]
+          - generic [ref=f2e962]:
+            - generic [ref=f2e963]:
+              - generic [ref=f2e964]: Canon EOS R100 Mirrorless Camera RF-S 18-45mm f/4.5-6.3 IS STM
+              - generic [ref=f2e965]:
+                - generic [ref=f2e966]: "4.4"
+                - generic [ref=f2e969]: 2,079 Ratings & 203 Reviews
+              - list [ref=f2e972]:
+                - listitem [ref=f2e973]: • DIGIC 8 Image Processor, 4K 24p Video with Crop, Full HD 60p, Dual Pixel CMOS AF with 143 AF Zones, 6.5 fps Electronic Shutter, 2.36m-Dot OLED EVF, 3" 1.04m-Dot LCD Screen, Creative Assist Mode, Silent Mode for Quiet Operation, Bluetooth with SD Card Slot
+                - listitem [ref=f2e974]: "• Effective Pixels: 24.1 MP"
+                - listitem [ref=f2e975]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e976]: • WiFi Available
+                - listitem [ref=f2e977]: • 4K
+                - listitem [ref=f2e978]: • 2 Years Warranty
+            - generic [ref=f2e979]:
+              - generic [ref=f2e981]:
+                - generic [ref=f2e982]: ₹48,460
+                - generic [ref=f2e983]: ₹64,995
+                - generic [ref=f2e984]: 25% off
+              - generic [ref=f2e988]:
+                - generic [ref=f2e989]: Upto
+                - generic [ref=f2e990]: ₹38,800
+                - generic [ref=f2e991]: Off on Exchange
+              - generic [ref=f2e992]: Bank Offer
+        - 'link "BuyLuxe Mini Digital Camera for Kids for Girls and Boys | Gift for Young Children 0 DSLR Camera Add to Compare BuyLuxe Mini Digital Camera for Kids for Girls and Boys | Gift for Young Children 0 DSLR Camera 3.7 16 Ratings & 2 Reviews • Effective Pixels: 13 MP • Optical Zoom: 0 • Sensor Type: CCD | LCD Size: 2 inch • Max Shutter Speed: 0 • 0 ₹476 ₹1,997 76% off Bank Offer" [ref=f2e999] [cursor=pointer]':
+          - /url: /buyluxe-mini-digital-camera-kids-girls-boys-gift-young-children-0-dslr/p/itm62c7b1f044390?pid=CAMHH89FKAYVUTNE&lid=LSTCAMHH89FKAYVUTNES967QI&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_42&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.CAMHH89FKAYVUTNE.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - generic [ref=f2e1000]:
+            - img "BuyLuxe Mini Digital Camera for Kids for Girls and Boys | Gift for Young Children 0 DSLR Camera" [ref=f2e1004]
+            - generic [ref=f2e1005]: Add to Compare
+          - generic [ref=f2e1015]:
+            - generic [ref=f2e1016]:
+              - generic [ref=f2e1017]: BuyLuxe Mini Digital Camera for Kids for Girls and Boys | Gift for Young Children 0 DSLR Camera
+              - generic [ref=f2e1018]:
+                - generic [ref=f2e1019]: "3.7"
+                - generic [ref=f2e1022]: 16 Ratings & 2 Reviews
+              - list [ref=f2e1025]:
+                - listitem [ref=f2e1026]: "• Effective Pixels: 13 MP"
+                - listitem [ref=f2e1027]: "• Optical Zoom: 0"
+                - listitem [ref=f2e1028]: "• Sensor Type: CCD | LCD Size: 2 inch"
+                - listitem [ref=f2e1029]: "• Max Shutter Speed: 0"
+                - listitem [ref=f2e1030]: • 0
+            - generic [ref=f2e1031]:
+              - generic [ref=f2e1033]:
+                - generic [ref=f2e1034]: ₹476
+                - generic [ref=f2e1035]: ₹1,997
+                - generic [ref=f2e1036]: 76% off
+              - generic [ref=f2e1037]: Bank Offer
+        - 'link "Canon EOS R7 Mirrorless Camera Body with RF-S18 - 150mm f/3.5 - 6.3 IS STM Lens Canon EOS R7 Mirrorless Camera Body with RF-S18 - 150mm f/3.5 - 6.3 IS STM Lens 4.5 15 Ratings & 1 Reviews • 4K UHD Fine (7K oversampling), 4K 60p and Canon Log 3, Up to 30 fps continuous shooting with AF/AE tracking, Dual Pixel CMOS AF II (AF that recognises and tracks people, animals and vehicles), -5EV low light focusing2 (Accurate focus in low-light conditions), Collaborative IS (Body and lens stabilisation working together for up to 7 stops3 of protection from camera shake), 4K/60p, Touchscreen, Tilt Screen • Effective Pixels: 32.5 MP • Sensor Type: CMOS • WiFi Available • 4K • 2 Years Domestic Warranty ₹1,58,990 ₹1,75,995 9% off Only few left Upto ₹61,650 Off on Exchange" [ref=f2e1044] [cursor=pointer]':
+          - /url: /canon-eos-r7-mirrorless-camera-body-rf-s18-150mm-f-3-5-6-3-stm-lens/p/itmd3e8ee6e3f328?pid=DLLGFXCMMRCJD9HE&lid=LSTDLLGFXCMMRCJD9HEI1AHIF&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_43&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLGFXCMMRCJD9HE.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "Canon EOS R7 Mirrorless Camera Body with RF-S18 - 150mm f/3.5 - 6.3 IS STM Lens" [ref=f2e1049]
+          - generic [ref=f2e1054]:
+            - generic [ref=f2e1055]:
+              - generic [ref=f2e1056]: Canon EOS R7 Mirrorless Camera Body with RF-S18 - 150mm f/3.5 - 6.3 IS STM Lens
+              - generic [ref=f2e1057]:
+                - generic [ref=f2e1058]: "4.5"
+                - generic [ref=f2e1061]: 15 Ratings & 1 Reviews
+              - list [ref=f2e1064]:
+                - listitem [ref=f2e1065]: • 4K UHD Fine (7K oversampling), 4K 60p and Canon Log 3, Up to 30 fps continuous shooting with AF/AE tracking, Dual Pixel CMOS AF II (AF that recognises and tracks people, animals and vehicles), -5EV low light focusing2 (Accurate focus in low-light conditions), Collaborative IS (Body and lens stabilisation working together for up to 7 stops3 of protection from camera shake), 4K/60p, Touchscreen, Tilt Screen
+                - listitem [ref=f2e1066]: "• Effective Pixels: 32.5 MP"
+                - listitem [ref=f2e1067]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e1068]: • WiFi Available
+                - listitem [ref=f2e1069]: • 4K
+                - listitem [ref=f2e1070]: • 2 Years Domestic Warranty
+            - generic [ref=f2e1071]:
+              - generic [ref=f2e1073]:
+                - generic [ref=f2e1074]: ₹1,58,990
+                - generic [ref=f2e1075]: ₹1,75,995
+                - generic [ref=f2e1076]: 9% off
+              - generic [ref=f2e1079]: Only few left
+              - generic [ref=f2e1083]:
+                - generic [ref=f2e1084]: Upto
+                - generic [ref=f2e1085]: ₹61,650
+                - generic [ref=f2e1086]: Off on Exchange
+        - 'link "BuyLuxe Mini HD Digital Camera for Kids – Photo & Video Camera Toy 13MP DSLR Camera Add to Compare BuyLuxe Mini HD Digital Camera for Kids – Photo & Video Camera Toy 13MP DSLR Camera 3.5 13 Ratings & 1 Reviews • Effective Pixels: 13 MP • Optical Zoom: 0 • Sensor Type: CCD | LCD Size: 6 inch • Max Shutter Speed: 0 • 0 ₹476 ₹1,899 74% off Only few left Bank Offer" [ref=f2e1091] [cursor=pointer]':
+          - /url: /buyluxe-mini-hd-digital-camera-kids-photo-video-toy-13mp-dslr/p/itm602821a5a1dd6?pid=CAMHKVH5FPBYXRXK&lid=LSTCAMHKVH5FPBYXRXK8BE1QP&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_44&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.CAMHKVH5FPBYXRXK.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - generic [ref=f2e1092]:
+            - img "BuyLuxe Mini HD Digital Camera for Kids – Photo & Video Camera Toy 13MP DSLR Camera" [ref=f2e1096]
+            - generic [ref=f2e1097]: Add to Compare
+          - generic [ref=f2e1107]:
+            - generic [ref=f2e1108]:
+              - generic [ref=f2e1109]: BuyLuxe Mini HD Digital Camera for Kids – Photo & Video Camera Toy 13MP DSLR Camera
+              - generic [ref=f2e1110]:
+                - generic [ref=f2e1111]: "3.5"
+                - generic [ref=f2e1114]: 13 Ratings & 1 Reviews
+              - list [ref=f2e1117]:
+                - listitem [ref=f2e1118]: "• Effective Pixels: 13 MP"
+                - listitem [ref=f2e1119]: "• Optical Zoom: 0"
+                - listitem [ref=f2e1120]: "• Sensor Type: CCD | LCD Size: 6 inch"
+                - listitem [ref=f2e1121]: "• Max Shutter Speed: 0"
+                - listitem [ref=f2e1122]: • 0
+            - generic [ref=f2e1123]:
+              - generic [ref=f2e1125]:
+                - generic [ref=f2e1126]: ₹476
+                - generic [ref=f2e1127]: ₹1,899
+                - generic [ref=f2e1128]: 74% off
+              - generic [ref=f2e1129]: Only few left
+              - generic [ref=f2e1132]: Bank Offer
+        - 'link "POZUB strong Tripod stand + Dustproof Bag with Clip |Tripod stand for camera||Gimbal for smartphone|mo... Add to Compare POZUB strong Tripod stand + Dustproof Bag with Clip |Tripod stand for camera||Gimbal for smartphone|mo... 4 20 Ratings & 1 Reviews • Effective Pixels: 0 MP • Optical Zoom: NA • Sensor Type: CCD | LCD Size: 0 inch • Max Shutter Speed: NA • NA ₹335 ₹700 52% off Only few left Bank Offer" [ref=f2e1139] [cursor=pointer]':
+          - /url: /pozub-strong-tripod-stand-dustproof-bag-clip-tripod-camera-gimbal-smartphone-mobile-phone-stand-multi-use-selfie-stick-desktop-online-course-video-recording-special-design-streaming-blogs-classes-presentation-creating-product-demos-vlog-video-blogging-gimbal-inmonopods-gimbal-stabilizer-gimbal-monopod-tripod-kit-intripod-ball-head-intripod-bracket-tripod-clamp-inmonopod-kit-in-mobile-holder-hand-classes-camera-stands-high-quality-tripod-monopod-monopod-bracket-head-abs-dslr/p/itm9d620986eaefd?pid=CAMG6Q2RVRMCGMZP&lid=LSTCAMG6Q2RVRMCGMZPPHPBLI&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_45&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.CAMG6Q2RVRMCGMZP.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - generic [ref=f2e1140]:
+            - img "POZUB strong Tripod stand + Dustproof Bag with Clip |Tripod stand for camera||Gimbal for smartphone|mo..." [ref=f2e1144]
+            - generic [ref=f2e1145]: Add to Compare
+          - generic [ref=f2e1155]:
+            - generic [ref=f2e1156]:
+              - generic [ref=f2e1157]: POZUB strong Tripod stand + Dustproof Bag with Clip |Tripod stand for camera||Gimbal for smartphone|mo...
+              - generic [ref=f2e1158]:
+                - generic [ref=f2e1159]: "4"
+                - generic [ref=f2e1162]: 20 Ratings & 1 Reviews
+              - list [ref=f2e1165]:
+                - listitem [ref=f2e1166]: "• Effective Pixels: 0 MP"
+                - listitem [ref=f2e1167]: "• Optical Zoom: NA"
+                - listitem [ref=f2e1168]: "• Sensor Type: CCD | LCD Size: 0 inch"
+                - listitem [ref=f2e1169]: "• Max Shutter Speed: NA"
+                - listitem [ref=f2e1170]: • NA
+            - generic [ref=f2e1171]:
+              - generic [ref=f2e1173]:
+                - generic [ref=f2e1174]: ₹335
+                - generic [ref=f2e1175]: ₹700
+                - generic [ref=f2e1176]: 52% off
+              - generic [ref=f2e1179]: Only few left
+              - generic [ref=f2e1182]: Bank Offer
+        - 'link "Canon EOS R50 Mirrorless Camera Body with RF - S 18 - 45 mm f/4.5 - 6.3 IS STM Canon EOS R50 Mirrorless Camera Body with RF - S 18 - 45 mm f/4.5 - 6.3 IS STM 4.6 1,289 Ratings & 151 Reviews • 4K 30p (6K oversampled) & FHD 120p, Up to 15 frames per second & EOS iTR AF X, Shoot all angles, Dual Pixel CMOS Auto Focus II coupled, Capture more unmissable moments at 12fps3. Switch up to 15fps when using silent electronic shutter4., UHD 4K 30p video, SLOW MOTION FOR IMPACT, Enhanced streaming and video calls, SEAMLESS CONNECTIVITY, Bluetooth?and Wi-Fi connectivity enable easy remote shooting8. • Effective Pixels: 24.2 MP • Sensor Type: CMOS • H.264/H.265/MPEG-4/4K • 2 Years Warranty ₹67,990 ₹75,995 10% off Only 4 left Upto ₹50,250 Off on Exchange" [ref=f2e1189] [cursor=pointer]':
+          - /url: /canon-eos-r50-mirrorless-camera-body-rf-s-18-45-mm-f-4-5-6-3-stm/p/itm3bc65ea11d81b?pid=DLLGN2WBZ6JJS3JJ&lid=LSTDLLGN2WBZ6JJS3JJFZSEOW&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_46&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLGN2WBZ6JJS3JJ.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "Canon EOS R50 Mirrorless Camera Body with RF - S 18 - 45 mm f/4.5 - 6.3 IS STM" [ref=f2e1194]
+          - generic [ref=f2e1199]:
+            - generic [ref=f2e1200]:
+              - generic [ref=f2e1201]: Canon EOS R50 Mirrorless Camera Body with RF - S 18 - 45 mm f/4.5 - 6.3 IS STM
+              - generic [ref=f2e1202]:
+                - generic [ref=f2e1203]: "4.6"
+                - generic [ref=f2e1206]: 1,289 Ratings & 151 Reviews
+              - list [ref=f2e1209]:
+                - listitem [ref=f2e1210]: • 4K 30p (6K oversampled) & FHD 120p, Up to 15 frames per second & EOS iTR AF X, Shoot all angles, Dual Pixel CMOS Auto Focus II coupled, Capture more unmissable moments at 12fps3. Switch up to 15fps when using silent electronic shutter4., UHD 4K 30p video, SLOW MOTION FOR IMPACT, Enhanced streaming and video calls, SEAMLESS CONNECTIVITY, Bluetooth?and Wi-Fi connectivity enable easy remote shooting8.
+                - listitem [ref=f2e1211]: "• Effective Pixels: 24.2 MP"
+                - listitem [ref=f2e1212]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e1213]: • H.264/H.265/MPEG-4/4K
+                - listitem [ref=f2e1214]: • 2 Years Warranty
+            - generic [ref=f2e1215]:
+              - generic [ref=f2e1217]:
+                - generic [ref=f2e1218]: ₹67,990
+                - generic [ref=f2e1219]: ₹75,995
+                - generic [ref=f2e1220]: 10% off
+              - generic [ref=f2e1223]: Only 4 left
+              - generic [ref=f2e1227]:
+                - generic [ref=f2e1228]: Upto
+                - generic [ref=f2e1229]: ₹50,250
+                - generic [ref=f2e1230]: Off on Exchange
+        - link [ref=f2e1235] [cursor=pointer]:
+          - /url: /nikon-z-series-50-mirrorless-camera-body-16-50mm-50-250mm-lenses/p/itmf3f5ad7ec8578?pid=DLLFHY8YCXP7WM32&lid=LSTDLLFHY8YCXP7WM32SALMY0&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_47&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLFHY8YCXP7WM32.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "NIKON Z series Z 50 Mirrorless Camera Body with 16-50mm & 50-250mm Lenses" [ref=f2e1240]
+          - generic [ref=f2e1245]:
+            - generic [ref=f2e1246]:
+              - generic [ref=f2e1247]: NIKON Z series Z 50 Mirrorless Camera Body with 16-50mm & 50-250mm Lenses
+              - generic [ref=f2e1248]:
+                - generic [ref=f2e1249]: "4.5"
+                - generic [ref=f2e1252]: 598 Ratings & 71 Reviews
+              - list [ref=f2e1255]:
+                - listitem [ref=f2e1256]: • Edit videos on the fly (Shoot a clip, trim it right in the camera, send it to your phone and post it without missing a beat.), Like two cameras in one.(The Z 50 lets you separately save the most appropriate settings for each shooting mode and then change smoothly between them with the flick of a lever.), Turn an ordinary moment into an epic 120 FPS slow motion 1080p Full HD video, great for bending time, speed ramping, Quick and nimble., Shoot remotely, Eye catching in so many ways., Extra-creative filters & effects., High-end feel, Great content deserves a great-looking live stream.
+                - listitem [ref=f2e1257]: "• Effective Pixels: 20.9 MP"
+                - listitem [ref=f2e1258]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e1259]: • WiFi Available
+                - listitem [ref=f2e1260]: • UHD 4K
+                - listitem [ref=f2e1261]: • 2 Year Warranty
+            - generic [ref=f2e1262]:
+              - generic [ref=f2e1263]: ₹1,02,995
+              - generic [ref=f2e1268]: Only few left
+              - generic [ref=f2e1272]:
+                - generic [ref=f2e1273]: Upto
+                - generic [ref=f2e1274]: ₹58,650
+                - generic [ref=f2e1275]: Off on Exchange
+        - 'link "SONY ILCE-6700KBQ IN5 Mirrorless Camera Body with SELP16502 mm Lens SONY ILCE-6700KBQ IN5 Mirrorless Camera Body with SELP16502 mm Lens 4.7 130 Ratings & 25 Reviews • Effective Pixels: 27 MP • Sensor Type: CMOS • WiFi Available • 4K • 2 Year warranty on product ₹1,35,990 ₹1,47,490 7% off Upto ₹60,650 Off on Exchange Bank Offer" [ref=f2e1280] [cursor=pointer]':
+          - /url: /sony-ilce-6700kbq-in5-mirrorless-camera-body-selp16502-mm-lens/p/itm5dfbb8110097d?pid=DLLHGR2ZZC6K8YTY&lid=LSTDLLHGR2ZZC6K8YTYSOZVQJ&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_2_48&otracker=search&otracker1=search&fm=organic&iid=f7d54866-ee7a-4a17-b3ee-773189d7a47d.DLLHGR2ZZC6K8YTY.SEARCH&ppt=None&ppn=None&ssid=7w86ygw7tc0000001790526331430&qH=198617266331bfb3&ov_redirect=true
+          - img "SONY ILCE-6700KBQ IN5 Mirrorless Camera Body with SELP16502 mm Lens" [ref=f2e1285]
+          - generic [ref=f2e1290]:
+            - generic [ref=f2e1291]:
+              - generic [ref=f2e1292]: SONY ILCE-6700KBQ IN5 Mirrorless Camera Body with SELP16502 mm Lens
+              - generic [ref=f2e1293]:
+                - generic [ref=f2e1294]: "4.7"
+                - generic [ref=f2e1297]: 130 Ratings & 25 Reviews
+              - list [ref=f2e1300]:
+                - listitem [ref=f2e1301]: "• Effective Pixels: 27 MP"
+                - listitem [ref=f2e1302]: "• Sensor Type: CMOS"
+                - listitem [ref=f2e1303]: • WiFi Available
+                - listitem [ref=f2e1304]: • 4K
+                - listitem [ref=f2e1305]: • 2 Year warranty on product
+            - generic [ref=f2e1306]:
+              - generic [ref=f2e1308]:
+                - generic [ref=f2e1309]: ₹1,35,990
+                - generic [ref=f2e1310]: ₹1,47,490
+                - generic [ref=f2e1311]: 7% off
+              - generic [ref=f2e1315]:
+                - generic [ref=f2e1316]: Upto
+                - generic [ref=f2e1317]: ₹60,650
+                - generic [ref=f2e1318]: Off on Exchange
+              - generic [ref=f2e1319]: Bank Offer
+        - generic [ref=f2e1324]:
+          - generic [ref=f2e1325]: Page 2 of 7
+          - navigation [ref=f2e1326]:
+            - link "Previous" [ref=f2e1327] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=1
+            - link "1" [ref=f2e1328] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=1
+            - link "2" [ref=f2e1329] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=2
+            - link "3" [ref=f2e1330] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=3
+            - link "4" [ref=f2e1331] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=4
+            - link "5" [ref=f2e1332] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=5
+            - link "6" [ref=f2e1333] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=6
+            - link "7" [ref=f2e1334] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=7
+            - link "Next" [ref=f2e1335] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=3
+        - generic [ref=f2e1337]:
+          - text: Did you find what you were looking for?
+          - generic [ref=f2e1338]:
+            - generic [ref=f2e1339] [cursor=pointer]: "Yes"
+            - generic [ref=f2e1340] [cursor=pointer]: "No"
+    - generic [ref=f2e1342]:
+      - generic [ref=f2e1343]: Reviews for Popular DSLR & Mirrorless
+      - generic [ref=f2e1344]:
+        - generic [ref=f2e1345]:
+          - generic [ref=f2e1347]:
+            - img "BuyLuxe Mini Digital Camera for Kids for Girls and Boys | Gift for Young Children 13MP DSLR Camera"
+          - generic [ref=f2e1348]:
+            - link "1. BuyLuxe Mini Digital Camera... 3.3 60 Ratings&5 Reviews ₹538 73% off" [ref=f2e1349] [cursor=pointer]:
+              - /url: /buyluxe-mini-digital-camera-kids-girls-boys-gift-young-children-13mp-dslr/p/itm316d68b1bd03c?pid=CAMHKVKTZFH5KG4E&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f2e1350]: 1. BuyLuxe Mini Digital Camera...
+              - generic [ref=f2e1352]:
+                - generic [ref=f2e1353]: "3.3"
+                - generic [ref=f2e1355]:
+                  - text: 60 Ratings
+                  - generic [ref=f2e1356]: "&5 Reviews"
+              - generic [ref=f2e1358]:
+                - generic [ref=f2e1359]: ₹538
+                - generic [ref=f2e1360]: 73% off
+            - list [ref=f2e1361]:
+              - listitem [ref=f2e1362]: "Effective Pixels: 13 MP"
+              - listitem [ref=f2e1363]: "Optical Zoom: 0"
+              - listitem [ref=f2e1364]: "Sensor Type: CCD | LCD Size: 0 inch"
+        - generic [ref=f2e1365]:
+          - generic [ref=f2e1366]: Most Helpful Review
+          - generic [ref=f2e1368]:
+            - generic [ref=f2e1369]:
+              - generic [ref=f2e1370]: "3"
+              - paragraph [ref=f2e1372]: Decent product
+            - generic [ref=f2e1373]: The quality of this camera is bad but it's good for kids it has games,music,etc
+            - generic [ref=f2e1378]:
+              - paragraph [ref=f2e1379]: Flipkart Customer
+              - paragraph [ref=f2e1384]: Certified Buyer
+              - paragraph [ref=f2e1385]: 4 months ago
+        - generic [ref=f2e1386]:
+          - generic [ref=f2e1387]: Recent Review
+          - generic [ref=f2e1389]:
+            - generic [ref=f2e1390]:
+              - generic [ref=f2e1391]: "3"
+              - paragraph [ref=f2e1393]: Decent product
+            - generic [ref=f2e1394]: The quality of this camera is bad but it's good for kids it has games,music,etc
+            - generic [ref=f2e1399]:
+              - paragraph [ref=f2e1400]: Flipkart Customer
+              - paragraph [ref=f2e1405]: Certified Buyer
+              - paragraph [ref=f2e1406]: 4 months ago
+      - generic [ref=f2e1407]:
+        - generic [ref=f2e1408]:
+          - generic [ref=f2e1410]:
+            - img "POZUB strong Tripod stand + Dustproof Bag with Clip |Tripod stand for camera||Gimbal for smartphone|mobile phone stand|Multi-Use Selfie Stick Desktop Online Course Video Recording Special Design for Streaming, Video Blogs, Online Classes, Presentation, Creating Product Demos, Vlog,Video Blogging ,Gimbal,inMonopods Video Stand in Gimbal Stabilizer,Gimbal Monopod,Tripod Kit,inTripod Ball Head,inTripod Bracket,Tripod Clamp, inMonopod Kit, |in mobile holder for hand| stand for online classes| Camera stands high Quality Tripod, Monopod Kit, Monopod, Tripod Kit, Tripod Bracket, Tripod Ball Head ABS DSLR Camera"
+          - generic [ref=f2e1411]:
+            - link "2. POZUB strong Tripod stand +... 4 20 Ratings&1 Reviews ₹335 52% off" [ref=f2e1412] [cursor=pointer]:
+              - /url: /pozub-strong-tripod-stand-dustproof-bag-clip-tripod-camera-gimbal-smartphone-mobile-phone-stand-multi-use-selfie-stick-desktop-online-course-video-recording-special-design-streaming-blogs-classes-presentation-creating-product-demos-vlog-video-blogging-gimbal-inmonopods-gimbal-stabilizer-gimbal-monopod-tripod-kit-intripod-ball-head-intripod-bracket-tripod-clamp-inmonopod-kit-in-mobile-holder-hand-classes-camera-stands-high-quality-tripod-monopod-monopod-bracket-head-abs-dslr/p/itm9d620986eaefd?pid=CAMG6Q2RVRMCGMZP&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f2e1413]: 2. POZUB strong Tripod stand +...
+              - generic [ref=f2e1415]:
+                - generic [ref=f2e1416]: "4"
+                - generic [ref=f2e1418]:
+                  - text: 20 Ratings
+                  - generic [ref=f2e1419]: "&1 Reviews"
+              - generic [ref=f2e1421]:
+                - generic [ref=f2e1422]: ₹335
+                - generic [ref=f2e1423]: 52% off
+            - list [ref=f2e1424]:
+              - listitem [ref=f2e1425]: "Effective Pixels: 0 MP"
+              - listitem [ref=f2e1426]: "Optical Zoom: NA"
+              - listitem [ref=f2e1427]: "Sensor Type: CCD | LCD Size: 0 inch"
+        - generic [ref=f2e1428]:
+          - generic [ref=f2e1429]: Most Helpful Review
+          - generic [ref=f2e1431]:
+            - generic [ref=f2e1432]:
+              - generic [ref=f2e1433]: "5"
+              - paragraph [ref=f2e1435]: Must buy!
+            - generic [ref=f2e1436]: Good products
+            - generic [ref=f2e1441]:
+              - paragraph [ref=f2e1442]: Flipkart Customer
+              - paragraph [ref=f2e1447]: Certified Buyer
+              - paragraph [ref=f2e1448]: Aug, 2022
+        - generic [ref=f2e1449]:
+          - generic [ref=f2e1450]: Recent Review
+          - generic [ref=f2e1452]:
+            - generic [ref=f2e1453]:
+              - generic [ref=f2e1454]: "5"
+              - paragraph [ref=f2e1456]: Must buy!
+            - generic [ref=f2e1457]: Good products
+            - generic [ref=f2e1462]:
+              - paragraph [ref=f2e1463]: Flipkart Customer
+              - paragraph [ref=f2e1468]: Certified Buyer
+              - paragraph [ref=f2e1469]: Aug, 2022
+      - generic [ref=f2e1470]:
+        - generic [ref=f2e1471]:
+          - generic [ref=f2e1473]:
+            - img "BuyLuxe Mini HD Digital Camera for Kids – Photo & Video Camera Toy 13MP DSLR Camera"
+          - generic [ref=f2e1474]:
+            - link "3. BuyLuxe Mini HD Digital Cam... 3.5 13 Ratings&1 Reviews ₹476 74% off" [ref=f2e1475] [cursor=pointer]:
+              - /url: /buyluxe-mini-hd-digital-camera-kids-photo-video-toy-13mp-dslr/p/itm602821a5a1dd6?pid=CAMHKVH5FPBYXRXK&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f2e1476]: 3. BuyLuxe Mini HD Digital Cam...
+              - generic [ref=f2e1478]:
+                - generic [ref=f2e1479]: "3.5"
+                - generic [ref=f2e1481]:
+                  - text: 13 Ratings
+                  - generic [ref=f2e1482]: "&1 Reviews"
+              - generic [ref=f2e1484]:
+                - generic [ref=f2e1485]: ₹476
+                - generic [ref=f2e1486]: 74% off
+            - list [ref=f2e1487]:
+              - listitem [ref=f2e1488]: "Effective Pixels: 13 MP"
+              - listitem [ref=f2e1489]: "Optical Zoom: 0"
+              - listitem [ref=f2e1490]: "Sensor Type: CCD | LCD Size: 6 inch"
+        - generic [ref=f2e1491]:
+          - generic [ref=f2e1492]: Most Helpful Review
+          - generic [ref=f2e1494]:
+            - generic [ref=f2e1495]:
+              - generic [ref=f2e1496]: "5"
+              - paragraph [ref=f2e1498]: Fabulous!
+            - generic [ref=f2e1499]: Good
+            - generic [ref=f2e1504]:
+              - paragraph [ref=f2e1505]: C S JHA
+              - paragraph [ref=f2e1510]: Certified Buyer
+              - paragraph [ref=f2e1511]: 28 days ago
+        - generic [ref=f2e1512]:
+          - generic [ref=f2e1513]: Recent Review
+          - generic [ref=f2e1515]:
+            - generic [ref=f2e1516]:
+              - generic [ref=f2e1517]: "5"
+              - paragraph [ref=f2e1519]: Fabulous!
+            - generic [ref=f2e1520]: Good
+            - generic [ref=f2e1525]:
+              - paragraph [ref=f2e1526]: C S JHA
+              - paragraph [ref=f2e1531]: Certified Buyer
+              - paragraph [ref=f2e1532]: 28 days ago
+      - generic [ref=f2e1533]:
+        - generic [ref=f2e1534]:
+          - generic [ref=f2e1536]:
+            - img "SONY Alpha ILCE-6400M/B IN5 Mirrorless Camera with 18-135 mm Zoom Lens Featuring Eye AF and 4K movie recording"
+          - generic [ref=f2e1537]:
+            - link "4. SONY Alpha ILCE-6400M/B IN5... 4.6 1,282 Ratings&153 Reviews ₹87,490 24% off" [ref=f2e1538] [cursor=pointer]:
+              - /url: /sony-alpha-ilce-6400m-b-in5-mirrorless-camera-18-135-mm-zoom-lens-featuring-eye-af-4k-movie-recording/p/itm8bb8f94012e57?pid=DLLFDJ8AHYXPQKRG&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f2e1539]: 4. SONY Alpha ILCE-6400M/B IN5...
+              - generic [ref=f2e1541]:
+                - generic [ref=f2e1542]: "4.6"
+                - generic [ref=f2e1544]:
+                  - text: 1,282 Ratings
+                  - generic [ref=f2e1545]: "&153 Reviews"
+              - generic [ref=f2e1547]:
+                - generic [ref=f2e1548]: ₹87,490
+                - generic [ref=f2e1549]: 24% off
+            - list [ref=f2e1550]:
+              - listitem [ref=f2e1551]: 4K movies and pro-level features, Natural-looking images that match what you see, Cleaner images even in dim light, Creative movie production, High-resolution 4K recording, Create time-lapse movies, Vlog with useful features, Take advantage of various movie functions, A high resolution LCD monitor with handy touchscreen functions, Incredible image quality, Sophisticated eye recognition and tracking, Persistent tracking ability, High speed continuous shooting with AF/AE tracking, Bluetooth & NFC, Touch Screen
+              - listitem [ref=f2e1552]: "Effective Pixels: 24.2 MP"
+              - listitem [ref=f2e1553]: "Sensor Type: CMOS"
+        - generic [ref=f2e1554]:
+          - generic [ref=f2e1555]: Most Helpful Review
+          - generic [ref=f2e1557]:
+            - generic [ref=f2e1558]:
+              - generic [ref=f2e1559]: "5"
+              - paragraph [ref=f2e1561]: Classy product
+            - generic [ref=f2e1564]:
+              - generic [ref=f2e1565]: As you know without lenses cameras are nothing. And Sony lenses are very expensive. It's not just a beginner level camera, its more than that, so if you are...
+              - generic [ref=f2e1566] [cursor=pointer]: Read full review
+            - generic [ref=f2e1568]:
+              - paragraph [ref=f2e1569]: Sachin Kumar Jha
+              - paragraph [ref=f2e1574]: Certified Buyer
+              - paragraph [ref=f2e1575]: Jul, 2020
+        - generic [ref=f2e1576]:
+          - generic [ref=f2e1577]: Recent Review
+          - generic [ref=f2e1579]:
+            - generic [ref=f2e1580]:
+              - generic [ref=f2e1581]: "4"
+              - paragraph [ref=f2e1583]: Delightful
+            - generic [ref=f2e1584]: Great quality with 18-135mm lens,If there was video stabilization as well, this camera+lens combo would have been perfect.
+            - generic [ref=f2e1589]:
+              - paragraph [ref=f2e1590]: Vivek Kumar
+              - paragraph [ref=f2e1595]: Certified Buyer
+              - paragraph [ref=f2e1596]: 5 days ago
+      - generic [ref=f2e1597]:
+        - generic [ref=f2e1598]:
+          - generic [ref=f2e1600]:
+            - img "SONY Alpha ZV-E10K Mirrorless Camera Body with 16-50mm Zoom Lens 24.2 MP APS-C Sensor,Designed for easy selfie and vlog shoots"
+          - generic [ref=f2e1601]:
+            - link "5. SONY Alpha ZV-E10K Mirrorle... 4.5 132 Ratings&42 Reviews ₹63,990 8% off" [ref=f2e1602] [cursor=pointer]:
+              - /url: /sony-alpha-zv-e10k-mirrorless-camera-body-16-50mm-zoom-lens-24-2-mp-aps-c-sensor-designed-easy-selfie-vlog-shoots/p/itm4f2a3940ed8b5?pid=DLLHP4UWMFBDGN3Z&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f2e1603]: 5. SONY Alpha ZV-E10K Mirrorle...
+              - generic [ref=f2e1605]:
+                - generic [ref=f2e1606]: "4.5"
+                - generic [ref=f2e1608]:
+                  - text: 132 Ratings
+                  - generic [ref=f2e1609]: "&42 Reviews"
+              - generic [ref=f2e1611]:
+                - generic [ref=f2e1612]: ₹63,990
+                - generic [ref=f2e1613]: 8% off
+            - list [ref=f2e1614]:
+              - listitem [ref=f2e1615]: APS-C format Exmor R CMOS sensor with 26.0 megapixels, BIONZ XR image processing engine for stunning 4K footage at up to 60p, Creative Look and Cinematic Vlog Setting for greater expressive freedom, 2+1 Year Extended warranty on registration on Alpha Community, Intuitive UI, vertical shooting and 5 GHz connectivity for simple sharing, High battery capacity for extended shooting
+              - listitem [ref=f2e1616]: "Effective Pixels: 24.2 MP"
+              - listitem [ref=f2e1617]: "Sensor Type: CMOS"
+        - generic [ref=f2e1618]:
+          - generic [ref=f2e1619]: Most Helpful Review
+          - generic [ref=f2e1621]:
+            - generic [ref=f2e1622]:
+              - generic [ref=f2e1623]: "5"
+              - paragraph [ref=f2e1625]: Just wow!
+            - generic [ref=f2e1626]: Love this camera and the video quality are best
+            - generic [ref=f2e1631]:
+              - paragraph [ref=f2e1632]: Sakshi Gitte
+              - paragraph [ref=f2e1637]: Certified Buyer
+              - paragraph [ref=f2e1638]: 2 months ago
+        - generic [ref=f2e1639]:
+          - generic [ref=f2e1640]: Recent Review
+          - generic [ref=f2e1642]:
+            - generic [ref=f2e1643]:
+              - generic [ref=f2e1644]: "5"
+              - paragraph [ref=f2e1646]: Best in the market!
+            - generic [ref=f2e1647]: This price range best camera
+            - generic [ref=f2e1652]:
+              - paragraph [ref=f2e1653]: Nikhil As
+              - paragraph [ref=f2e1658]: Certified Buyer
+              - paragraph [ref=f2e1659]: 1 day ago
+  - contentinfo [ref=f2e1660]:
+    - generic [ref=f2e1662]:
+      - generic [ref=f2e1663]:
+        - generic [ref=f2e1664]:
+          - generic [ref=f2e1665]: ABOUT
+          - link "Contact Us" [ref=f2e1666] [cursor=pointer]:
+            - /url: /helpcentre?otracker=footer_navlinks
+          - link "About Us" [ref=f2e1667] [cursor=pointer]:
+            - /url: https://corporate.flipkart.net/corporate-home
+          - link "Careers" [ref=f2e1668] [cursor=pointer]:
+            - /url: https://www.flipkartcareers.com/?otracker=footer_navlinks
+          - link "Flipkart Stories" [ref=f2e1669] [cursor=pointer]:
+            - /url: http://stories.flipkart.com/?otracker=footer_navlinks
+          - link "Press" [ref=f2e1670] [cursor=pointer]:
+            - /url: http://stories.flipkart.com/category/top-stories/news/
+          - link "Corporate Information" [ref=f2e1671] [cursor=pointer]:
+            - /url: /corporate-information
+        - generic [ref=f2e1672]:
+          - generic [ref=f2e1673]: GROUP COMPANIES
+          - link "Myntra" [ref=f2e1674] [cursor=pointer]:
+            - /url: https://www.myntra.com/
+          - link "Cleartrip" [ref=f2e1675] [cursor=pointer]:
+            - /url: https://www.cleartrip.com/
+          - link "Shopsy" [ref=f2e1676] [cursor=pointer]:
+            - /url: https://www.shopsy.in/
+        - generic [ref=f2e1677]:
+          - generic [ref=f2e1678]: HELP
+          - link "Payments" [ref=f2e1679] [cursor=pointer]:
+            - /url: /pages/payments
+          - link "Shipping" [ref=f2e1680] [cursor=pointer]:
+            - /url: /pages/shipping
+          - link "Cancellation & Returns" [ref=f2e1681] [cursor=pointer]:
+            - /url: /helpcentre?catalog=55c9c6edb000002e002c1701&view=CATALOG
+          - link "FAQ" [ref=f2e1682] [cursor=pointer]:
+            - /url: /helpcentre?catalog=55c9c8e2b0000023002c1702&view=CATALOG
+        - generic [ref=f2e1683]:
+          - generic [ref=f2e1684]: CONSUMER POLICY
+          - link "Cancellation & Returns" [ref=f2e1685] [cursor=pointer]:
+            - /url: /pages/returnpolicy?otracker=footer_navlinks
+          - link "Terms Of Use" [ref=f2e1686] [cursor=pointer]:
+            - /url: /pages/terms?otracker=footer_navlinks
+          - link "Security" [ref=f2e1687] [cursor=pointer]:
+            - /url: /pages/paymentsecurity?otracker=footer_navlinks
+          - link "Privacy" [ref=f2e1688] [cursor=pointer]:
+            - /url: /pages/privacypolicy?otracker=footer_navlinks
+          - link "Sitemap" [ref=f2e1689] [cursor=pointer]:
+            - /url: /sitemap?otracker=footer_navlinks
+          - link "Grievance Redressal" [ref=f2e1690] [cursor=pointer]:
+            - /url: /pages/grievance-redressal-mechanism?otracker=footer_navlinks
+          - link "EPR Compliance" [ref=f2e1691] [cursor=pointer]:
+            - /url: /pages/ewaste-compliance-tnc?otracker=footer_navlinks
+          - link "FSSAI Food Safety Connect App" [ref=f2e1692] [cursor=pointer]:
+            - /url: https://fssai.gov.in/cms/food-safety-connect.php
+        - generic [ref=f2e1694]:
+          - generic [ref=f2e1695]: "Mail Us:"
+          - generic [ref=f2e1698]:
+            - paragraph [ref=f2e1699]: Flipkart Internet Private Limited,
+            - paragraph [ref=f2e1700]: Buildings Alyssa, Begonia &
+            - paragraph [ref=f2e1701]: Clove Embassy Tech Village,
+            - paragraph [ref=f2e1702]: Outer Ring Road, Devarabeesanahalli Village,
+            - paragraph [ref=f2e1703]: Bengaluru, 560103,
+            - paragraph [ref=f2e1704]: Karnataka, India
+          - generic [ref=f2e1705]: Social
+          - generic [ref=f2e1706]:
+            - link [ref=f2e1708] [cursor=pointer]:
+              - /url: https://www.facebook.com/flipkart
+            - link [ref=f2e1711] [cursor=pointer]:
+              - /url: https://www.twitter.com/flipkart
+            - link [ref=f2e1714] [cursor=pointer]:
+              - /url: https://www.youtube.com/flipkart
+            - link [ref=f2e1717] [cursor=pointer]:
+              - /url: https://www.instagram.com/flipkart
+        - generic [ref=f2e1720]:
+          - generic [ref=f2e1721]: "Registered Office Address:"
+          - generic [ref=f2e1724]:
+            - paragraph [ref=f2e1725]: Flipkart Internet Private Limited,
+            - paragraph [ref=f2e1726]: Buildings Alyssa, Begonia &
+            - paragraph [ref=f2e1727]: Clove Embassy Tech Village,
+            - paragraph [ref=f2e1728]: Outer Ring Road, Devarabeesanahalli Village,
+            - paragraph [ref=f2e1729]: Bengaluru, 560103,
+            - paragraph [ref=f2e1730]: Karnataka, India
+            - paragraph [ref=f2e1731]: "CIN : U51109KA2012PTC066107"
+            - paragraph [ref=f2e1732]:
+              - text: "Telephone:"
+              - link "044-45614700" [ref=f2e1733] [cursor=pointer]:
+                - /url: tel:044-45614700
+              - text: /
+              - link "044-67415800" [ref=f2e1734] [cursor=pointer]:
+                - /url: tel:044-67415800
+      - generic [ref=f2e1736]:
+        - link "Become a Seller" [ref=f2e1739] [cursor=pointer]:
+          - /url: https://seller.flipkart.com/?utm_source=fkwebsite&utm_medium=websitedirect
+        - generic [ref=f2e1740]: Advertise
+        - link "Gift Cards" [ref=f2e1744] [cursor=pointer]:
+          - /url: /the-gift-card-store?otracker=footer_navlinks
+        - link "Help Center" [ref=f2e1747] [cursor=pointer]:
+          - /url: /helpcentre?otracker=footer_navlinks
+        - generic [ref=f2e1748]: © 2007-2026 Flipkart.com
+```
+
+# Test source
+
+```ts
+  1  | import {test, expect, Page, Locator} from '@playwright/test';
+  2  | 
+  3  | 
+  4  | async function dslrNamePrice (page: Page, name: string): Promise<Locator> {
+  5  | 
+  6  |      while(true){
+  7  |       const items = await page.locator("//div[@class='RG5Slk']").filter({hasText: 'DSLR Camera' });
+  8  |         if (await items.count())
+  9  |         return items;
+  10 | 
+  11 |         const next= await page.locator('a span').filter({hasText:'Next'}).click();
+> 12 |        if(await next.isDisabled())
+     |                      ^ TypeError: Cannot read properties of undefined (reading 'isDisabled')
+  13 |            throw new Error(`Row not found!: ${name}`)
+  14 |         await next.click();
+  15 |     }
+  16 | 
+  17 | }
+  18 | 
+  19 | test ("Verifying DSLR details in Flipkart", async ({page}) => {
+  20 | 
+  21 | 
+  22 |     await page.goto("https://www.flipkart.com/");
+  23 |     await page.locator("//span[@class='b3wTlE']").click();
+  24 |     await page.waitForTimeout(5000);
+  25 |     const searchBar = page.locator("//input[@name='q']").nth(0);
+  26 |     await searchBar.click();
+  27 |     await searchBar.fill("DSLR Camera");
+  28 |     await searchBar.press('Enter');
+  29 | 
+  30 |     await dslrNamePrice(page, "DSLR Camera");
+  31 | 
+  32 | 
+  33 |     await page.pause();
+  34 | 
+  35 | 
+  36 | });
+```
