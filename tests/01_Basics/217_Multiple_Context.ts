@@ -1,3 +1,4 @@
+;
 import { chromium } from "playwright";
 async function multiUserTest() {
     let browser = await chromium.launch({ headless: false });
