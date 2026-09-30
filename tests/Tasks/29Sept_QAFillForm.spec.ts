@@ -23,6 +23,10 @@ test('QA Profile Form', async ({ page }) => {
     await expect(page.locator('#selenium-tab-panel')).toContainText("element.click(); element.sendKeys('hello'); element.getAttribute('value');");
     await page.locator('#profile-submit').click();
 
+     const result_json = JSON.parse(await page.locator('#submission-output').innerText());
+     console.log(result_json);
+
+
     //Just explored myself
     let submittedProfile = page.locator('#submission-output');
     await expect(submittedProfile).toContainText(`{
@@ -39,6 +43,7 @@ test('QA Profile Form', async ({ page }) => {
   "continents": "Asia",
   "upload": {}
 }`);
+
 
     await page.pause();
 });

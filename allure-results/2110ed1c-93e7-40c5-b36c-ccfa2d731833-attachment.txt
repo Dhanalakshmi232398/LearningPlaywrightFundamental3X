@@ -1,0 +1,11 @@
+{
+  firstName: 'DhanaMathu',
+  lastName: 'Rithan',
+  gender: 'Female',
+  yearsExperience: '5',
+  date: '2026-09-29',
+  profession: 'Manual Tester',
+  tools: [ 'Protractor', 'Selenium Webdriver' ],
+  continents: 'Asia',
+  upload: {}
+}
