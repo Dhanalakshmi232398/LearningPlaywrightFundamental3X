@@ -23,6 +23,7 @@ test('QA Profile Form', async ({ page }) => {
     await expect(page.locator('#selenium-tab-panel')).toContainText("element.click(); element.sendKeys('hello'); element.getAttribute('value');");
     await page.locator('#profile-submit').click();
 
+    //Just explored myself
     let submittedProfile = page.locator('#submission-output');
     await expect(submittedProfile).toContainText(`{
   "firstName": "DhanaMathu",
