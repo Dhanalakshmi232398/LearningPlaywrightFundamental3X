@@ -1,0 +1,6 @@
+{
+  "runId": "20261001_164140",
+  "tests": {
+    "chromium › 10_Keyboard_Hover_Drag_Drop_Calendar\\251_Drag_Drop.spec.ts › Verify the Drag and Drop functionality": "passed"
+  }
+}

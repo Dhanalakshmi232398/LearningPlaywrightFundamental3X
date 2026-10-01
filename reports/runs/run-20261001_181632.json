@@ -1,0 +1,8 @@
+{
+  "runId": "20261001_181632",
+  "tests": {
+    "chromium › 11_JS_Alerts\\254_JS_Alerts.spec.ts › Javascript Alerts › JS Alert accept 2": "passed",
+    "chromium › 11_JS_Alerts\\254_JS_Alerts.spec.ts › Javascript Alerts › JS Alert accept 3": "passed",
+    "chromium › 11_JS_Alerts\\254_JS_Alerts.spec.ts › Javascript Alerts › JS Alert accept 1": "passed"
+  }
+}

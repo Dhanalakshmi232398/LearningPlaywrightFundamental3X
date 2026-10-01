@@ -1,0 +1,6 @@
+{
+  "runId": "20261001_142004",
+  "tests": {
+    "chromium › 10_Kwyboard_Hover_Drag_Drop_Calendar\\251_Drag_Drop.spec.ts › Verify the Drag and Drop functionality": "passed"
+  }
+}
