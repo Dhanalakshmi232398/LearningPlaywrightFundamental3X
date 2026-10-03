@@ -1,0 +1,6 @@
+{
+  "runId": "20261003_172603",
+  "tests": {
+    "chromium › 12_Handle_SVG\\256_SVG_Advance_TC.spec.ts › SVG Handling › locate SVG root and assert visble": "failed"
+  }
+}

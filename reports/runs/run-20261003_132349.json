@@ -1,0 +1,6 @@
+{
+  "runId": "20261003_132349",
+  "tests": {
+    "chromium › 12_Handle_SVG\\255_SVG_Handling_Testcase.spec.ts › SVG Elements › Verify the SVG elements": "passed"
+  }
+}
