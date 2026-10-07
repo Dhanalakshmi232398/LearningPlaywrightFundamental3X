@@ -1,0 +1,6 @@
+{
+  "runId": "20261006_190344",
+  "tests": {
+    "chromium › 14_File_Upload\\265_FileUpload_OtherDirctory.spec.ts › FileUpload handling › upload files from a different directory": "passed"
+  }
+}

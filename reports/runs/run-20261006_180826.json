@@ -1,0 +1,6 @@
+{
+  "runId": "20261006_180826",
+  "tests": {
+    "chromium › 14_File_Upload\\264_Multiple_FileUpload_MixedTypes_Disk_TC.spec.ts › FileUpload handling › upload PDF, JPG, and DOC files from disk": "passed"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "runId": "20261006_160314",
+  "tests": {
+    "chromium › 14_File_Upload\\262_MultipleFileUpload_TC.spec.ts › FileUpload handling › locate FileUpload and upload": "passed"
+  }
+}

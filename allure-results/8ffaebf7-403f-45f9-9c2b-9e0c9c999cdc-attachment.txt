@@ -1,0 +1,3 @@
+C:\Users\Dell\OneDrive\Documents\LearningPlaywrightFundamental3X\tests\14_File_Upload\upload-sample.pdf
+C:\Users\Dell\OneDrive\Documents\LearningPlaywrightFundamental3X\tests\14_File_Upload\upload-sample.jpg
+C:\Users\Dell\OneDrive\Documents\LearningPlaywrightFundamental3X\tests\14_File_Upload\upload-sample.doc

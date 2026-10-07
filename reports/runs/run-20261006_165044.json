@@ -1,0 +1,6 @@
+{
+  "runId": "20261006_165044",
+  "tests": {
+    "chromium › 14_File_Upload\\263_Multiple_FileUpload_Disk_TC.spec.ts › FileUpload handling › upload multiple files from disk": "passed"
+  }
+}

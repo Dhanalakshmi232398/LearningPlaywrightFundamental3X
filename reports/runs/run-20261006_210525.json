@@ -1,0 +1,6 @@
+{
+  "runId": "20261006_210525",
+  "tests": {
+    "chromium › Tasks\\6Oct_Shadow_DOM.spec.ts › Shadow handling › locate Shadow DOM and assert visible": "timedOut"
+  }
+}

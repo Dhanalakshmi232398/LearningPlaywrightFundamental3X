@@ -1,0 +1,2 @@
+Complete verification in the browser, then resume the test in Playwright Inspector.
+C:\Users\Dell\OneDrive\Documents\LearningPlaywrightFundamental3X\tests\Tasks\imgFile1.jpg

@@ -1,0 +1,679 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Tasks\6Oct_Shadow_DOM.spec.ts >> Shadow handling >> locate Shadow DOM and assert visible
+- Location: tests\Tasks\6Oct_Shadow_DOM.spec.ts:11:8
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.fill: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('#training')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - banner [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - heading [level=5] [ref=e7]:
+          - link "Get free access to our advanced XPath & CSS course. Ends in -" [ref=e8] [cursor=pointer]:
+            - /url: https://selectorshub.com/get-free-access-of-advanced-xpath-and-css-selector-paid-course/
+        - generic [ref=e10]:
+          - generic [ref=e11]: 09 Hrs
+          - generic [ref=e12]: 59 Min
+          - generic [ref=e13]: 40 Sec
+        - link "Claim It Here" [ref=e15] [cursor=pointer]:
+          - /url: https://selectorshub.com/get-free-access-of-advanced-xpath-and-css-selector-paid-course/
+      - generic [ref=e20]:
+        - link [ref=e22] [cursor=pointer]:
+          - /url: https://selectorshub.com
+        - navigation "Menu" [ref=e24]:
+          - generic "Menu Toggle" [ref=e25]:
+            - list [ref=e26]:
+              - listitem [ref=e27]:
+                - generic [ref=e28]:
+                  - generic [ref=e29]: Products
+                  - button "Open Products" [ref=e31] [cursor=pointer]
+              - listitem [ref=e36]:
+                - generic [ref=e37]:
+                  - generic [ref=e38]: Pricing
+                  - button "Open Pricing" [ref=e40] [cursor=pointer]
+              - listitem [ref=e45]:
+                - link "Courses" [ref=e47] [cursor=pointer]:
+                  - /url: /courses-recordings/
+              - listitem [ref=e49]:
+                - link "Practice" [ref=e51] [cursor=pointer]:
+                  - /url: /xpath-practice-page/
+              - listitem [ref=e53]:
+                - link "Meetup" [ref=e55] [cursor=pointer]:
+                  - /url: https://selectorshub.com/meetup
+              - listitem [ref=e57]:
+                - generic [ref=e58]:
+                  - generic [ref=e59]: Resources
+                  - button "Open Resources" [ref=e61] [cursor=pointer]
+              - listitem [ref=e66]:
+                - link "Support" [ref=e68] [cursor=pointer]:
+                  - /url: /contact-us/
+        - link [ref=e72] [cursor=pointer]:
+          - /url: "#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjIyNjU3IiwidG9nZ2xlIjpmYWxzZX0%3D"
+  - main [ref=e75]:
+    - generic [ref=e77]:
+      - generic [ref=e80]:
+        - iframe [ref=e82]: "<span data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\" class=\"mce_SELRES_start\"> </span>Loading…"
+        - link [ref=e84] [cursor=pointer]:
+          - /url: https://testrigor.com/?utm_campaign=Selectors%20Hub&utm_source=selectorshub&utm_medium=xpp&eid=LYFcml
+          - heading "Find out how to automate these controls without XPath." [level=1] [ref=e85]:
+            - text: Find out
+            - generic [ref=e86]: how to automate
+            - text: these controls without XPath.
+        - link "Get Free Access of Advanced XPath and CSS Selector Paid Course." [ref=e89] [cursor=pointer]:
+          - /url: /get-free-access-of-advanced-xpath-and-css-selector-paid-course/
+      - generic [ref=e93]:
+        - generic [ref=e94]:
+          - heading "Dummy Form" [level=6] [ref=e96]
+          - generic [ref=e99]:
+            - text: User Email
+            - textbox "Email" [ref=e100]:
+              - /placeholder: Enter email
+            - text: Password
+            - textbox "Password" [ref=e101]:
+              - /placeholder: Enter Password
+            - generic [ref=e105]:
+              - generic [ref=e106]: Company
+              - textbox "Enter your company" [ref=e107]
+              - generic [ref=e108]: Mobile Number
+              - spinbutton "Enter your mobile number" [ref=e109]
+              - generic [ref=e111]:
+                - text: Country
+                - textbox "Country" [ref=e112]
+            - button "Submit" [ref=e113] [cursor=pointer]
+            - textbox "Enter your first crush name" [ref=e114]:
+              - /placeholder: First Crush
+            - generic [ref=e115]:
+              - text: A tool to generate manual test cases automatically TestCase Studio -
+              - link "DownLoad Link" [ref=e116] [cursor=pointer]:
+                - /url: https://selectorshub.com/
+            - link "SelectorsHub Youtube Channel" [ref=e117] [cursor=pointer]:
+              - /url: https://www.youtube.com/c/SelectorsHub?sub_confirmation=1
+            - link "A course with complex scenarios like Shadow DOM, iframe inside shadow root, nested shadow dom inside iframe and a lot more" [ref=e118] [cursor=pointer]:
+              - /url: https://www.udemy.com/course/xpath-css-selector-webdom-selectorshub-testcase-studio/
+            - link:
+              - /url: https://selectorshub.com/
+            - link:
+              - /url: https://selectorshub.com/
+        - generic [ref=e119]:
+          - heading "User Table" [level=6] [ref=e121]
+          - table [ref=e125]:
+            - rowgroup [ref=e126]:
+              - row [ref=e127]:
+                - columnheader [ref=e128]:
+                  - checkbox [ref=e129]
+                - columnheader [ref=e130]:
+                  - link "Username" [ref=e131] [cursor=pointer]:
+                    - /url: https://bit.ly/shub_training_udemy
+                - columnheader [ref=e132]:
+                  - link "User Role" [ref=e133] [cursor=pointer]:
+                    - /url: https://bit.ly/shub_training_udemy
+                - columnheader [ref=e134]:
+                  - link "Employee Name" [ref=e135] [cursor=pointer]:
+                    - /url: https://bit.ly/shub_training_udemy
+                - columnheader [ref=e136]:
+                  - link "Status" [ref=e137] [cursor=pointer]:
+                    - /url: https://bit.ly/shub_training_udemy
+            - rowgroup [ref=e138]:
+              - row [ref=e139]:
+                - cell [ref=e140]:
+                  - checkbox [ref=e141]
+                - cell [ref=e142]:
+                  - link "Garry.White" [ref=e143] [cursor=pointer]:
+                    - /url: https://bit.ly/shub_training_udemy
+                - cell "ESS" [ref=e144]
+                - cell "Garry White" [ref=e145]
+                - cell "Enabled" [ref=e146]
+              - row [ref=e147]:
+                - cell [ref=e148]:
+                  - checkbox [ref=e149]
+                - cell [ref=e150]:
+                  - link "Jasmine.Morgan" [ref=e151] [cursor=pointer]:
+                    - /url: https://bit.ly/shub_training_udemy
+                - cell "ESS" [ref=e152]
+                - cell "Jasmine Morgan" [ref=e153]
+                - cell "Enabled" [ref=e154]
+              - row [ref=e155]:
+                - cell [ref=e156]:
+                  - checkbox [ref=e157]
+                - cell [ref=e158]:
+                  - link "Joe.Root" [ref=e159] [cursor=pointer]:
+                    - /url: https://bit.ly/shub_training_udemy
+                - cell "ESS" [ref=e160]
+                - cell "Joe Root" [ref=e161]
+                - cell "Enabled" [ref=e162]
+              - row [ref=e163]:
+                - cell [ref=e164]:
+                  - checkbox [ref=e165]
+                - cell [ref=e166]:
+                  - link "John.Smith" [ref=e167] [cursor=pointer]:
+                    - /url: https://www.youtube.com/c/SelectorsHub?sub_confirmation=1
+                - cell "Admin" [ref=e168]
+                - cell "John Smith" [ref=e169]
+                - cell "Enabled" [ref=e170]
+              - row [ref=e171]:
+                - cell [ref=e172]:
+                  - checkbox [ref=e173]
+                - cell [ref=e174]:
+                  - link "Jordan.Mathews" [ref=e175] [cursor=pointer]:
+                    - /url: https://www.youtube.com/c/SelectorsHub?sub_confirmation=1
+                - cell "ESS" [ref=e176]
+                - cell "Jordan Mathews" [ref=e177]
+                - cell "Enabled" [ref=e178]
+              - row [ref=e179]:
+                - cell [ref=e180]:
+                  - checkbox [ref=e181]
+                - cell [ref=e182]:
+                  - link "Kevin.Mathews" [ref=e183] [cursor=pointer]:
+                    - /url: https://bit.ly/shub_training_udemy
+                - cell "ESS" [ref=e184]
+                - cell "Kevin Mathews" [ref=e185]
+                - cell "Enabled" [ref=e186]
+        - generic [ref=e187]:
+          - heading "Shadow DOM" [level=6] [ref=e189]
+          - generic [ref=e191]:
+            - generic [active] [ref=e192]:
+              - link "Learning Hub" [ref=e193] [cursor=pointer]:
+                - /url: https://www.youtube.com/c/SelectorsHub?sub_confirmation=1
+              - heading "UserName" [level=4] [ref=e194]
+              - textbox "user name field" [ref=e195]:
+                - /placeholder: enter name
+                - text: Dominos
+              - textbox "Enter pizza name" [ref=e199]: Margherita and Garlic Bread
+            - link "Click to practice iframe inside shadow dom scenario" [ref=e202] [cursor=pointer]:
+              - /url: https://selectorshub.com/iframe-in-shadow-dom/
+        - generic [ref=e203]:
+          - heading "Dropdown, Disabled element, Popup Alert and Complex Element" [level=6] [ref=e205]
+          - generic [ref=e207]:
+            - text: Inspect this element, you will see comment just below the html of this element in DOM
+            - generic [ref=e208]:
+              - generic [ref=e209]: Can you enter name here through automation
+              - textbox "First Enter name" [disabled] [ref=e213]
+              - textbox "Enter Last name" [disabled] [ref=e214]
+            - heading "Useful Links for learning" [level=3] [ref=e215]
+            - button "Checkout here" [ref=e217] [cursor=pointer]
+            - generic [ref=e218]:
+              - text: "Choose a car:"
+              - combobox "Choose a car:" [ref=e219]:
+                - option "Volvo" [selected]
+                - option "Saab"
+                - option "Opel"
+                - option "Audi"
+            - generic [ref=e220]:
+              - text: করোনা সংক্রমণ বাড়াচ্ছে
+              - paragraph [ref=e221]: 也支持中文
+            - textbox [ref=e222]: pick a date
+            - textbox [ref=e223]
+            - link "Consider a small Donation and support this page." [ref=e224] [cursor=pointer]:
+              - /url: https://selectorshub.com/donate/
+            - heading "Food Time" [level=3] [ref=e225]
+            - link "Click to practice shadow dom inside iframe scenario" [ref=e226] [cursor=pointer]:
+              - /url: https://selectorshub.com/shadow-dom-in-iframe/
+            - generic "toolSearch"
+            - text: If you find difficult to handle any scenario on this page, checkout the tutorial here on
+            - link "SelectorsHub Youtube channel" [ref=e228] [cursor=pointer]:
+              - /url: https://www.youtube.com/c/SelectorsHub?sub_confirmation=1
+            - text: and if you want to learn each concept in detail, you must take this course by Creator Sanjay Kumar
+            - link "Course Link" [ref=e229] [cursor=pointer]:
+              - /url: https://www.udemy.com/course/xpath-css-selector-webdom-selectorshub-testcase-studio/
+            - heading [level=3] [ref=e230]:
+              - text: Lets test xpath skills
+              - img "💡" [ref=e231]
+              - text: Which xpaths are invalid & why?
+            - generic [ref=e234]:
+              - paragraph [ref=e235]: //input[@title='Search']
+              - paragraph [ref=e236]: //label[normalize-space()='User Email’]//following:input[@id='userId']
+              - paragraph [ref=e237]: //a[normalise-space()="Why testRigor?"]
+              - paragraph [ref=e238]: //input[@id='pass']div
+              - paragraph [ref=e239]: //input[@id='pass']/div/
+              - paragraph [ref=e240]: //label[ends-with(text(),'User Email')]
+              - paragraph [ref=e241]: //svg[@iconid=’editon’]
+            - link "Click to Download PNG File" [ref=e242] [cursor=pointer]:
+              - /url: https://selectorshub.com/wp-content/uploads/2023/12/Mega-sale-600-%C3%97-360-px-30.png
+            - button "Choose File" [ref=e243]
+            - button "Click To Open Window Alert" [ref=e244] [cursor=pointer]
+            - button "Click To Open Window Prompt Alert" [ref=e245] [cursor=pointer]
+        - generic [ref=e246]:
+          - heading "Bottom Modal" [level=6] [ref=e248]
+          - generic [ref=e249]:
+            - heading "Bottom Modal" [level=3] [ref=e251]
+            - button "Open Modal" [ref=e253] [cursor=pointer]
+        - generic [ref=e254]:
+          - heading "iframe and table" [level=6] [ref=e256]
+          - generic [ref=e257]:
+            - generic [ref=e258]:
+              - paragraph [ref=e259]:
+                - link "This is a broken link" [ref=e260] [cursor=pointer]:
+                  - /url: https://selectorhub.com/
+              - paragraph [ref=e261]: Click below to
+            - link "practice iframe and nested iframe scenarios." [ref=e263] [cursor=pointer]:
+              - /url: /iframe-scenario/
+            - generic [ref=e268]:
+              - generic [ref=e269]:
+                - generic [ref=e271]:
+                  - combobox "entries per page" [ref=e272]:
+                    - option "10" [selected]
+                    - option "25"
+                    - option "50"
+                    - option "100"
+                  - generic [ref=e273]: entries per page
+                - generic [ref=e275]:
+                  - generic [ref=e276]: "Search:"
+                  - searchbox "Search:" [ref=e277]
+              - table [ref=e280]:
+                - rowgroup [ref=e287]:
+                  - row [ref=e288]:
+                    - cell [ref=e289] [cursor=pointer]:
+                      - 'button ": Activate to sort" [ref=e291]'
+                    - 'rowheader "OS OS: Activate to sort" [ref=e292] [cursor=pointer]':
+                      - generic [ref=e293]:
+                        - generic [ref=e294]: OS
+                        - 'button "OS: Activate to sort" [ref=e295]'
+                    - 'columnheader "Browser Browser: Activate to sort" [ref=e296] [cursor=pointer]':
+                      - generic [ref=e297]:
+                        - generic [ref=e298]: Browser
+                        - 'button "Browser: Activate to sort" [ref=e299]'
+                    - 'columnheader "City City: Activate to sort" [ref=e300] [cursor=pointer]':
+                      - generic [ref=e301]:
+                        - generic [ref=e302]: City
+                        - 'button "City: Activate to sort" [ref=e303]'
+                    - 'columnheader "Country Country: Activate to sort" [ref=e304] [cursor=pointer]':
+                      - generic [ref=e305]:
+                        - generic [ref=e306]: Country
+                        - 'button "Country: Activate to sort" [ref=e307]'
+                - rowgroup [ref=e308]:
+                  - row [ref=e309]:
+                    - cell [ref=e310]:
+                      - checkbox [ref=e311]
+                    - cell "windows" [ref=e312]
+                    - cell "chrome" [ref=e313]
+                    - cell "Hvidovre" [ref=e314]
+                    - cell "Denmark" [ref=e315]
+                  - row [ref=e316]:
+                    - cell [ref=e317]:
+                      - checkbox [ref=e318]
+                    - cell "windows" [ref=e319]
+                    - cell "chrome" [ref=e320]
+                    - cell "Samsun" [ref=e321]
+                    - cell "India" [ref=e322]
+                  - row [ref=e323]:
+                    - cell [ref=e324]:
+                      - checkbox [ref=e325]
+                    - cell "mac" [ref=e326]
+                    - cell "chrome" [ref=e327]
+                    - cell "Samsun" [ref=e328]
+                    - cell "India" [ref=e329]
+                  - row [ref=e330]:
+                    - cell [ref=e331]:
+                      - checkbox [ref=e332]
+                    - cell "windows" [ref=e333]
+                    - cell "chrome" [ref=e334]
+                    - cell "Samsun" [ref=e335]
+                    - cell "India" [ref=e336]
+                  - row [ref=e337]:
+                    - cell [ref=e338]:
+                      - checkbox [ref=e339]
+                    - cell "windows" [ref=e340]
+                    - cell "chrome" [ref=e341]
+                    - cell "Samsun" [ref=e342]
+                    - cell "India" [ref=e343]
+                  - row [ref=e344]:
+                    - cell [ref=e345]:
+                      - checkbox [ref=e346]
+                    - cell "windows" [ref=e347]
+                    - cell "chrome" [ref=e348]
+                    - cell "Samsun" [ref=e349]
+                    - cell "India" [ref=e350]
+                  - row [ref=e351]:
+                    - cell [ref=e352]:
+                      - checkbox [ref=e353]
+                    - cell "mac" [ref=e354]
+                    - cell "chrome" [ref=e355]
+                    - cell "Samsun" [ref=e356]
+                    - cell "India" [ref=e357]
+                  - row [ref=e358]:
+                    - cell [ref=e359]:
+                      - checkbox [ref=e360]
+                    - cell "windows" [ref=e361]
+                    - cell "chrome" [ref=e362]
+                    - cell "Samsun" [ref=e363]
+                    - cell "India" [ref=e364]
+                  - row [ref=e365]:
+                    - cell [ref=e366]:
+                      - checkbox [ref=e367]
+                    - cell "windows" [ref=e368]
+                    - cell "chrome" [ref=e369]
+                    - cell "Samsun" [ref=e370]
+                    - cell "India" [ref=e371]
+                  - row [ref=e372]:
+                    - cell [ref=e373]:
+                      - checkbox [ref=e374]
+                    - cell "windows" [ref=e375]
+                    - cell "chrome" [ref=e376]
+                    - cell "Samsun" [ref=e377]
+                    - cell "United States" [ref=e378]
+              - generic [ref=e379]:
+                - status [ref=e381]: Showing 1 to 10 of 99 entries
+                - navigation "pagination" [ref=e384]:
+                  - link "Previous" [disabled] [ref=e385]: ‹
+                  - link "1" [ref=e386] [cursor=pointer]
+                  - link "2" [ref=e387] [cursor=pointer]
+                  - link "3" [ref=e388] [cursor=pointer]
+                  - link "4" [ref=e389] [cursor=pointer]
+                  - link "5" [ref=e390] [cursor=pointer]
+                  - text: …
+                  - link "10" [ref=e391] [cursor=pointer]
+                  - link "Next" [ref=e392] [cursor=pointer]: ›
+        - iframe [ref=e395]: "<span data-mce-type=\"bookmark\" style=\"display: inline-block; width: 0px; overflow: hidden; line-height: 0;\" class=\"mce_SELRES_start\"> </span>Coming Google"
+        - generic [ref=e396]:
+          - heading "Payment Page" [level=6] [ref=e398]
+          - generic [ref=e401]:
+            - heading "Payment Details" [level=2] [ref=e402]
+            - generic [ref=e403]:
+              - generic [ref=e404]:
+                - generic [ref=e405]: Name on Card
+                - textbox "John Doe" [ref=e406]
+              - generic [ref=e407]:
+                - generic [ref=e408]: Card Number
+                - textbox "1234 5678 9012 3456" [ref=e409]
+              - generic [ref=e410]:
+                - generic [ref=e411]:
+                  - generic [ref=e412]: Expiry Date
+                  - textbox "MM/YY" [ref=e413]
+                - generic [ref=e414]:
+                  - generic [ref=e415]: CVV
+                  - textbox "123" [ref=e416]
+              - button "Pay ₹999" [ref=e417] [cursor=pointer]
+        - generic [ref=e418]:
+          - heading "Important Update" [level=6] [ref=e420]
+          - generic [ref=e421]:
+            - paragraph [ref=e423]:
+              - text: "We have to move iframe on separate pages due to performance issue on this page. Need any help: email –"
+              - strong [ref=e424]: support@selectorshub.com
+            - paragraph [ref=e426]: "Note: Want to add any specific scenario on this page, please write to us at support@selectorshub.com or connect on slack for one to one chat."
+        - generic [ref=e427]:
+          - heading "Complex Scenarios Covered in this page" [level=6] [ref=e429]
+          - generic [ref=e430]:
+            - list [ref=e432]:
+              - listitem [ref=e433]:
+                - generic [ref=e437]: Shadow DOM (Shadow-root)
+              - listitem [ref=e438]:
+                - generic [ref=e442]: SVG element inside shadow DOM.
+              - listitem [ref=e443]:
+                - generic [ref=e447]: Nested Shadow DOM.
+              - listitem [ref=e448]:
+                - generic [ref=e452]: Closed Shadow DOM.
+              - listitem [ref=e453]:
+                - generic [ref=e457]: Closed shadow dom inside Open shadow dom.
+              - listitem [ref=e458]:
+                - generic [ref=e462]: iframe inside shadow DOM.
+              - listitem [ref=e463]:
+                - generic [ref=e467]: Shadow DOM inside iframe.
+              - listitem [ref=e468]:
+                - generic [ref=e472]: Nested Shadow DOM inside iframe.
+              - listitem [ref=e473]:
+                - generic [ref=e477]: Closed shadow DOM inside iframe.
+              - listitem [ref=e478]:
+                - generic [ref=e482]: Closed shadow dom inside open shadow dom and open shadow dom inside iframe.
+              - listitem [ref=e483]:
+                - generic [ref=e487]: Canvas element.
+              - listitem [ref=e488]:
+                - generic [ref=e492]: Single iframe.
+              - listitem [ref=e493]:
+                - generic [ref=e497]: Nested iframes.
+              - listitem [ref=e498]:
+                - generic [ref=e502]: Cross Origin iframe
+              - listitem [ref=e503]:
+                - generic [ref=e507]: Spin Loader which disappear in 1 sec.
+              - listitem [ref=e508]:
+                - generic [ref=e512]: Email field with HTML form validation message tooltip.
+              - listitem [ref=e513]:
+                - generic [ref=e517]: Comment in DOM.
+              - listitem [ref=e518]:
+                - generic [ref=e522]: SVG element.
+              - listitem [ref=e523]:
+                - generic [ref=e527]: Disabled Input box which get enabled by clicking on an element.
+              - listitem [ref=e528]:
+                - generic [ref=e532]: Dropdown whose element can be inspected but disappear from UI on inspect.
+              - listitem [ref=e533]:
+                - generic [ref=e537]: WebElement to explain the text, dot and normalize-space() function of xpath.
+              - listitem [ref=e538]:
+                - generic [ref=e542]: HTML Table
+              - listitem [ref=e543]:
+                - generic [ref=e547]: Link without text.
+              - listitem [ref=e548]:
+                - generic [ref=e552]: Link with junk space text.
+              - listitem [ref=e553]:
+                - generic [ref=e557]: Non Interactable Elements
+              - listitem [ref=e558]:
+                - generic [ref=e562]: Pseudo Elements.
+              - listitem [ref=e563]:
+                - generic [ref=e567]: Not function of XPath.
+              - listitem [ref=e568]:
+                - generic [ref=e572]: Axes Based XPath.
+              - listitem [ref=e573]:
+                - generic [ref=e577]: cssSelector and all other selectors.
+              - listitem [ref=e578]:
+                - generic [ref=e582]: Pagination (Thanks to NaveenAutomationLabs for recommending this scenario.)
+            - paragraph [ref=e584]:
+              - text: Special thanks to
+              - link "Gaurav Khurana" [ref=e585] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/gauravkhuraana/
+              - text: for suggesting below scenarios.
+            - list [ref=e587]:
+              - listitem [ref=e588]:
+                - generic [ref=e592]: Download Button
+              - listitem [ref=e593]:
+                - generic [ref=e597]: Upload Button
+              - listitem [ref=e598]:
+                - generic [ref=e602]: Window Confirmation Alert Popup
+              - listitem [ref=e603]:
+                - generic [ref=e607]: Window Prompt Alert Popup
+              - listitem [ref=e608]:
+                - generic [ref=e612]: Model Alert Popup
+      - generic [ref=e619]:
+        - heading "Still have questions?" [level=2] [ref=e621]
+        - paragraph [ref=e623]: Can’t find the answer you’re looking for? Please live chat to our friendly team.
+        - link "Get In Touch" [ref=e625] [cursor=pointer]:
+          - /url: /contact-us/
+      - generic [ref=e631]:
+        - generic [ref=e632]:
+          - generic [ref=e633]: "30"
+          - generic [ref=e634]: Days
+        - generic [ref=e635]:
+          - generic [ref=e636]: "04"
+          - generic [ref=e637]: Hours
+        - generic [ref=e638]:
+          - generic [ref=e639]: "31"
+          - generic [ref=e640]: Minutes
+        - generic [ref=e641]:
+          - generic [ref=e642]: "02"
+          - generic [ref=e643]: Seconds
+  - contentinfo [ref=e644]:
+    - contentinfo [ref=e645]:
+      - generic [ref=e646]:
+        - generic [ref=e647]:
+          - generic [ref=e648]:
+            - link [ref=e650] [cursor=pointer]:
+              - /url: https://selectorshub.com
+              - img "SelectorHub Logo" [ref=e651]
+            - generic [ref=e652]:
+              - paragraph [ref=e653]: We’re Here to Enhance Your Web Testing—Start Now
+              - paragraph [ref=e654]: support@selectorshub.com
+          - generic [ref=e655]:
+            - heading "Free Tools" [level=4] [ref=e657]
+            - navigation "Menu" [ref=e659]:
+              - list [ref=e660]:
+                - listitem [ref=e661]:
+                  - link "SelectorsHub – Best Tool to auto generate Playwright Locators and Xpath" [ref=e662] [cursor=pointer]:
+                    - /url: https://selectorshub.com/selectorshub/
+                - listitem [ref=e663]:
+                  - link "TestCase Studio" [ref=e664] [cursor=pointer]:
+                    - /url: https://selectorshub.com/testcase-studio/
+                - listitem [ref=e665]:
+                  - link "Check My Links" [ref=e666] [cursor=pointer]:
+                    - /url: https://selectorshub.com/checkmylinks/
+                - listitem [ref=e667]:
+                  - link "Exploratory Tester" [ref=e668] [cursor=pointer]:
+                    - /url: https://selectorshub.com/exploratory-tester/
+                - listitem [ref=e669]:
+                  - link "Screenshot with URL" [ref=e670] [cursor=pointer]:
+                    - /url: https://selectorshub.com/screenshot-with-url/
+                - listitem [ref=e671]:
+                  - link "Page Load Timer" [ref=e672] [cursor=pointer]:
+                    - /url: https://selectorshub.com/page-load-timer/
+                - listitem [ref=e673]:
+                  - link "Testing Daily" [ref=e674] [cursor=pointer]:
+                    - /url: https://selectorshub.com/testing-daily/
+                - listitem [ref=e675]:
+                  - link "Auto Data Filler" [ref=e676] [cursor=pointer]:
+                    - /url: https://selectorshub.com/auto-data-filler/
+                - listitem [ref=e677]:
+                  - link "AutoTestData" [ref=e678] [cursor=pointer]:
+                    - /url: https://selectorshub.com/autotestdata/
+                - listitem [ref=e679]:
+                  - link "Automation Tool Analyzer" [ref=e680] [cursor=pointer]:
+                    - /url: https://selectorshub.com/automation-tool-analyzer/
+                - listitem [ref=e681]:
+                  - link "AI Post Creator" [ref=e682] [cursor=pointer]:
+                    - /url: https://selectorshub.com/ai-post-creator/
+          - generic [ref=e683]:
+            - heading "Paid Tools" [level=4] [ref=e685]
+            - navigation "Menu" [ref=e687]:
+              - list [ref=e688]:
+                - listitem [ref=e689]:
+                  - link "SelectorsHub Pro" [ref=e690] [cursor=pointer]:
+                    - /url: https://selectorshub.com/selectorshub-pro/
+                - listitem [ref=e691]:
+                  - link "TestCase Studio Pro" [ref=e692] [cursor=pointer]:
+                    - /url: https://selectorshub.com/testcase-studio-pro/
+                - listitem [ref=e693]:
+                  - link "Promote with us" [ref=e694] [cursor=pointer]:
+                    - /url: https://selectorshub.com/selectorshub-ads/
+          - generic [ref=e695]:
+            - heading "Resources" [level=4] [ref=e697]
+            - navigation "Menu" [ref=e699]:
+              - list [ref=e700]:
+                - listitem [ref=e701]:
+                  - link "Courses" [ref=e702] [cursor=pointer]:
+                    - /url: https://selectorshub.com/courses-recordings/
+                - listitem [ref=e703]:
+                  - link "Trainings" [ref=e704] [cursor=pointer]:
+                    - /url: https://selectorshub.com/bootcamp/
+                - listitem [ref=e705]:
+                  - link "Video Tutorials" [ref=e706] [cursor=pointer]:
+                    - /url: https://www.youtube.com/c/SelectorsHub?sub_confirmation=1
+                - listitem [ref=e707]:
+                  - link "Meetup" [ref=e708] [cursor=pointer]:
+                    - /url: https://selectorshub.com/meetup/
+                - listitem [ref=e709]:
+                  - link "SelectorsHub Offers" [ref=e710] [cursor=pointer]:
+                    - /url: https://selectorshub.com/offers/
+          - generic [ref=e711]:
+            - heading "Useful Links" [level=4] [ref=e713]
+            - navigation "Menu" [ref=e715]:
+              - list [ref=e716]:
+                - listitem [ref=e717]:
+                  - link "About Us" [ref=e718] [cursor=pointer]:
+                    - /url: https://selectorshub.com/team/
+                - listitem [ref=e719]:
+                  - link "Contact Us" [ref=e720] [cursor=pointer]:
+                    - /url: https://selectorshub.com/contact-us/
+                - listitem [ref=e721]:
+                  - link "Sponsors" [ref=e722] [cursor=pointer]:
+                    - /url: https://selectorshub.com/sponsors/
+                - listitem [ref=e723]:
+                  - link "Practice Page" [ref=e724] [cursor=pointer]:
+                    - /url: https://selectorshub.com/xpath-practice-page/
+                - listitem [ref=e725]:
+                  - link "Cancellation & Refund Policy" [ref=e726] [cursor=pointer]:
+                    - /url: https://selectorshub.com/cancellation-refund-policy/
+                - listitem [ref=e727]:
+                  - link "Certification" [ref=e728] [cursor=pointer]:
+                    - /url: https://selectorshub.com/certification/
+                - listitem [ref=e729]:
+                  - link "Privacy Policy" [ref=e730] [cursor=pointer]:
+                    - /url: https://selectorshub.com/privacy-policy/
+                - listitem [ref=e731]:
+                  - link "Terms of Service" [ref=e732] [cursor=pointer]:
+                    - /url: https://selectorshub.com/terms-of-service/
+        - generic [ref=e733]:
+          - generic [ref=e734]: Copyright © 2026 SelectorsHub ® . All rights reserved
+          - list [ref=e738]:
+            - listitem [ref=e739]:
+              - link "Youtube" [ref=e740] [cursor=pointer]:
+                - /url: https://www.youtube.com/c/SelectorsHub?sub_confirmation=1
+            - listitem [ref=e744]:
+              - link "Telegram" [ref=e745] [cursor=pointer]:
+                - /url: https://t.me/selectorshub
+            - listitem [ref=e749]:
+              - link "Instagram" [ref=e750] [cursor=pointer]:
+                - /url: https://www.instagram.com/SelectorsHub/
+            - listitem [ref=e754]:
+              - link "Linkedin" [ref=e755] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/selectorshub/about
+            - listitem [ref=e759]:
+              - link "Facebook" [ref=e760] [cursor=pointer]:
+                - /url: https://www.facebook.com/selectorshub/
+            - listitem [ref=e764]:
+              - link "Twitter" [ref=e765] [cursor=pointer]:
+                - /url: https://x.com/SelectorsHub
+  - generic [ref=e769]: desktop
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect, Locator } from '@playwright/test';
+  2  | 
+  3  | test.describe('Shadow handling', () => {
+  4  | 
+  5  |    const URL = 'https://selectorshub.com/xpath-practice-page/'; // replace with target page
+  6  | 
+  7  |    test.beforeEach(async ({ page }) => {
+  8  |       await page.goto(URL);
+  9  |    });
+  10 | 
+  11 |    test('locate Shadow DOM and assert visible', async ({ page }) => {
+  12 | 
+  13 |     await page.locator("#kils").fill("Dominos");
+  14 |     await page.locator("#pizza").fill("Margherita and Garlic Bread");
+> 15 |     await page.locator("#training").fill("Playwright+AI");
+     |                                     ^ Error: locator.fill: Test timeout of 30000ms exceeded.
+  16 | 
+  17 |     await page.keyboard.press("Tab");
+  18 |     await page.keyboard.press("Tab");
+  19 |     await page.locator("#pwd").fill("DMRithan04");
+  20 |     await page.locator("//a[@class='elementor-button elementor-button-link elementor-size-sm btn-hover']").click();
+  21 | 
+  22 | 
+  23 | 
+  24 | 
+  25 |     await page.pause();
+  26 | 
+  27 |    });
+  28 | 
+  29 | });
+```

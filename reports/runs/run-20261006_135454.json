@@ -1,0 +1,6 @@
+{
+  "runId": "20261006_135454",
+  "tests": {
+    "chromium › 13_Shadow_DOM\\259_Shadow_DOM.spec.ts › Shadow handling › locate Shadow DOM and assert visible": "passed"
+  }
+}
