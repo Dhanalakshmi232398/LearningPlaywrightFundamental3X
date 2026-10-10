@@ -1,0 +1,9 @@
+{
+  "runId": "20261010_213320",
+  "tests": {
+    "chromium › 18_Test_Hooks\\278_TestDescribe.spec.ts › Checkout suite — must run in order › open landing": "passed",
+    "chromium › 18_Test_Hooks\\278_TestDescribe.spec.ts › Checkout suite — must run in order › search product": "passed",
+    "chromium › 18_Test_Hooks\\278_TestDescribe.spec.ts › Checkout suite — must run in order › add to cart": "passed",
+    "chromium › 18_Test_Hooks\\278_TestDescribe.spec.ts › Checkout suite — must run in order › go to checkout": "passed"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "runId": "20261010_163256",
+  "tests": {
+    "chromium › 16_Scroll_toElement\\299_Abort_Signal_Scroll.spec.ts › Scroll to Element - TestingAcademy › Pramod: cancel the wait with an AbortSignal (v1.62+)": "passed",
+    "chromium › 16_Scroll_toElement\\299_Abort_Signal_Scroll.spec.ts › Scroll to Element - TestingAcademy › scroll to view": "passed"
+  }
+}

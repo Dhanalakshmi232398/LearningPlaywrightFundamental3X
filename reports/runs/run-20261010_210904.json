@@ -1,0 +1,6 @@
+{
+  "runId": "20261010_210904",
+  "tests": {
+    "chromium › 18_Test_Hooks\\274_Test.spec.ts › password is visible — broken in Safari, fix me": "skipped"
+  }
+}

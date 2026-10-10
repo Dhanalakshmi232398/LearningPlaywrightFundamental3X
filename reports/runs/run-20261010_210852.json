@@ -1,0 +1,6 @@
+{
+  "runId": "20261010_210852",
+  "tests": {
+    "chromium › 18_Test_Hooks\\274_Test.spec.ts › email is visible (slow on firefox)": "passed"
+  }
+}
