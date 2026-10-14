@@ -1,0 +1,6 @@
+{
+  "runId": "20261014_133951",
+  "tests": {
+    "chromium › 19_Data_Driven_Testing\\285_DDT_CSV.spec.ts › DDT CSV › Login with : valid credentials": "failed"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "runId": "20261014_133041",
+  "tests": {
+    "chromium › 19_Data_Driven_Testing\\288_DDT_YAML.spec.ts › DDT YAML › Login with : valid credentials": "failed",
+    "chromium › 19_Data_Driven_Testing\\288_DDT_YAML.spec.ts › DDT YAML › Login with : invalid password": "failed",
+    "chromium › 19_Data_Driven_Testing\\287_DDT_EXCEL.spec.ts › DDT Excel › login with every row from the spreadsheet": "failed",
+    "chromium › 19_Data_Driven_Testing\\288_DDT_YAML.spec.ts › DDT YAML › Login with : empty username": "failed",
+    "chromium › 19_Data_Driven_Testing\\288_DDT_YAML.spec.ts › DDT YAML › Login with : empty password": "failed",
+    "chromium › 19_Data_Driven_Testing\\288_DDT_YAML.spec.ts › DDT YAML › Login with : locked account": "failed",
+    "chromium › 19_Data_Driven_Testing\\288_DDT_YAML.spec.ts › DDT YAML › Login with : special chars": "failed",
+    "chromium › 19_Data_Driven_Testing\\288_DDT_YAML.spec.ts › DDT YAML › Login with : SQL injection attempt": "failed"
+  }
+}
