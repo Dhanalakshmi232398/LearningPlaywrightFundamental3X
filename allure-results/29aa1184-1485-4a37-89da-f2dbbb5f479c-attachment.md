@@ -1,0 +1,79 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: 20_Page_Object_Model\292_POM.spec.ts >> POM with Login Page Simple >> Login with valid credns
+- Location: tests\20_Page_Object_Model\292_POM.spec.ts:5:9
+
+# Error details
+
+```
+Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://app.thetestingacademy.com/playwright/ttacart/
+Call log:
+  - navigating to "https://app.thetestingacademy.com/playwright/ttacart/", waiting until "load"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - heading "Press space to play" [level=1] [ref=e6]
+    - generic [ref=e7]:
+      - paragraph [ref=e8]: "Try:"
+      - list [ref=e9]:
+        - listitem [ref=e10]: Checking the network cables, modem, and router
+        - listitem [ref=e11]: Reconnecting to Wi-Fi
+        - listitem [ref=e12]:
+          - link "Running Windows Network Diagnostics" [ref=e13] [cursor=pointer]:
+            - /url: javascript:diagnoseErrors()
+    - generic [ref=e14]: ERR_INTERNET_DISCONNECTED
+  - application "Dino game, press space to play" [ref=e16]
+```
+
+# Test source
+
+```ts
+  1  | // Login
+  2  | import { Page, Locator, expect } from '@playwright/test';
+  3  | 
+  4  | export class LoginPage {
+  5  |     // Page Locators
+  6  |     readonly page: Page;
+  7  |     readonly emailInput: Locator;
+  8  |     readonly passwordInput: Locator;
+  9  |     readonly loginButton: Locator;
+  10 | 
+  11 |     constructor(page: Page) {
+  12 |         this.page = page;
+  13 |         this.emailInput = page.getByRole("textbox", { name: "Username" });
+  14 |         this.passwordInput = page.getByRole("textbox", { name: "Password" })
+  15 |         // TTACart uses data-test, not Playwright's default data-testid.
+  16 |         this.loginButton = page.locator('[data-test="login-button"]');
+  17 |     }
+  18 | 
+  19 |     // Page Actions
+  20 |     async goto() {
+> 21 |         await this.page.goto('https://app.thetestingacademy.com/playwright/ttacart/');
+     |                         ^ Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://app.thetestingacademy.com/playwright/ttacart/
+  22 |     }
+  23 | 
+  24 |     async login(username: string, password: string) {
+  25 |         await this.emailInput.fill(username);
+  26 |         await this.passwordInput.fill(password);
+  27 |         await this.loginButton.click();
+  28 |     }
+  29 | 
+  30 | 
+  31 | 
+  32 | 
+  33 | 
+  34 | 
+  35 | 
+  36 | }
+```

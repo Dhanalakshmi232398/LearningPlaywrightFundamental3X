@@ -1,0 +1,6 @@
+{
+  "runId": "20261016_020349",
+  "tests": {
+    "chromium › 20_Page_Object_Model\\294_Heavy_Page.spec.ts › a 100-locator page object costs nothing to build": "passed"
+  }
+}

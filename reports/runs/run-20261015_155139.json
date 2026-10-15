@@ -1,0 +1,6 @@
+{
+  "runId": "20261015_155139",
+  "tests": {
+    "chromium › 20_Page_Object_Model\\291_No_POM.spec.ts › DDT Simple › Login with : valid credentials": "failed"
+  }
+}

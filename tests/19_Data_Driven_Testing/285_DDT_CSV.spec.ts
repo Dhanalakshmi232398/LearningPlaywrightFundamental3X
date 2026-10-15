@@ -19,7 +19,7 @@ test.describe('DDT CSV', () => {
 
             await expect(page).toHaveURL(data.expectedURL);
 
-            await page.pause();
+            //await page.pause();
         });
 
     }

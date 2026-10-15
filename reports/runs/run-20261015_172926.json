@@ -1,0 +1,6 @@
+{
+  "runId": "20261015_172926",
+  "tests": {
+    "chromium › 20_Page_Object_Model\\292_POM.spec.ts › POM with Login Page Simple › Login with valid credns": "failed"
+  }
+}

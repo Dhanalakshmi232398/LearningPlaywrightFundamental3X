@@ -1,0 +1,2 @@
+built 100 locators in 11ms
+112 methods on the prototype, shared by all instances

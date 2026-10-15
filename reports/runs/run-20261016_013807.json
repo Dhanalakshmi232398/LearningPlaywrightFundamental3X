@@ -1,0 +1,6 @@
+{
+  "runId": "20261016_013807",
+  "tests": {
+    "chromium › 20_Page_Object_Model\\293_Cart_add_assertions.spec.ts › add first item to cart and verify it in the cart": "passed"
+  }
+}
