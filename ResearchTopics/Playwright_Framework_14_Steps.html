@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The 14 Steps of an Advanced Playwright Framework — In Plain English</title>
+<meta name="description" content="An easy, human-friendly walkthrough of the 14 steps that make up an advanced Playwright framework — project setup, config, env, page objects, fixtures, test data, reporting, API testing and CI/CD — with a simple diagram." />
+<style>
+  :root {
+    --accent: #2da44e;
+    --accent-2: #0969da;
+    --accent-3: #8250df;
+    --accent-4: #d29922;
+    --warn: #bf8700;
+    --radius: 14px;
+    --radius-sm: 9px;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --maxw: 1040px;
+  }
+  html[data-theme="light"] {
+    --bg: #ffffff;
+    --bg-soft: #f6f8fa;
+    --bg-inset: #eef1f5;
+    --text: #1f2328;
+    --muted: #59636e;
+    --border: #d1d9e0;
+    --border-soft: #e4e8ee;
+    --code-bg: #f6f8fa;
+    --shadow: 0 1px 2px rgba(31,35,40,.06), 0 10px 30px rgba(31,35,40,.07);
+    --p1: #0969da; --p1bg: #ddf4ff;
+    --p2: #8250df; --p2bg: #fbefff;
+    --p3: #1a7f37; --p3bg: #dafbe1;
+    --p4: #bc4c00; --p4bg: #fff1e5;
+  }
+  html[data-theme="dark"] {
+    --bg: #0d1117;
+    --bg-soft: #161b22;
+    --bg-inset: #1c2129;
+    --text: #e6edf3;
+    --muted: #9198a1;
+    --border: #30363d;
+    --border-soft: #262c34;
+    --code-bg: #161b22;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 34px rgba(0,0,0,.35);
+    --accent: #3fb950; --accent-2: #58a6ff; --accent-3: #a371f7; --accent-4: #d29922;
+    --p1: #58a6ff; --p1bg: #0d2b4b;
+    --p2: #a371f7; --p2bg: #241a3d;
+    --p3: #3fb950; --p3bg: #10261a;
+    --p4: #db6d28; --p4bg: #2e1a0e;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent-2); }
+  code {
+    font-family: var(--mono); font-size: .88em;
+    background: var(--code-bg); border: 1px solid var(--border-soft);
+    border-radius: 5px; padding: 1px 5px;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+  header.hero {
+    background: linear-gradient(180deg, var(--bg-soft), var(--bg));
+    border-bottom: 1px solid var(--border);
+    padding: 46px 0 40px;
+  }
+  .hero h1 { font-size: 2rem; margin: 0 0 8px; letter-spacing: -.02em; }
+  .hero p { margin: 0; color: var(--muted); max-width: 70ch; }
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .badge {
+    font-size: .78rem; font-weight: 600; padding: 3px 10px; border-radius: 999px;
+    background: var(--bg-inset); color: var(--muted); border: 1px solid var(--border);
+  }
+  .theme-btn {
+    position: absolute; top: 18px; right: 20px; cursor: pointer;
+    background: var(--bg-soft); color: var(--text); border: 1px solid var(--border);
+    border-radius: 999px; padding: 6px 14px; font-size: .82rem; font-family: inherit;
+  }
+  .hero-inner { position: relative; }
+  .source {
+    margin-top: 16px; font-size: .88rem; color: var(--muted);
+    background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm);
+    padding: 10px 14px; display: inline-block; max-width: 100%;
+  }
+
+  main { padding: 34px 0 70px; }
+  h2 {
+    font-size: 1.3rem; margin: 44px 0 6px; letter-spacing: -.01em;
+    padding-bottom: 8px; border-bottom: 1px solid var(--border-soft);
+  }
+  h2 .n { color: var(--muted); font-weight: 600; }
+  .lead { color: var(--muted); margin: 0 0 18px; }
+
+  /* ---- one-line flow ---- */
+  .flowline {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+    background: var(--bg-soft); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 14px 16px; margin: 8px 0 0;
+    font-size: .9rem;
+  }
+  .flowline b { font-weight: 600; }
+  .flowline .sep { color: var(--muted); }
+
+  /* ---- diagram ---- */
+  .diagram { display: grid; gap: 14px; margin-top: 20px; }
+  .phase {
+    border: 1px solid var(--border); border-radius: var(--radius);
+    background: var(--bg-soft); padding: 14px 16px 16px; box-shadow: var(--shadow);
+  }
+  .phase-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .phase-tag {
+    font-size: .74rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 999px;
+  }
+  .phase-title { font-weight: 700; font-size: .98rem; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 7px 11px; font-size: .85rem;
+  }
+  .chip .num {
+    font-weight: 700; font-size: .74rem; width: 20px; height: 20px; flex: 0 0 20px;
+    display: grid; place-items: center; border-radius: 999px;
+    background: var(--bg-inset); color: var(--muted);
+  }
+  .p1 .phase-tag { background: var(--p1bg); color: var(--p1); }
+  .p2 .phase-tag { background: var(--p2bg); color: var(--p2); }
+  .p3 .phase-tag { background: var(--p3bg); color: var(--p3); }
+  .p4 .phase-tag { background: var(--p4bg); color: var(--p4); }
+  .arrow {
+    text-align: center; color: var(--muted); font-size: 1.1rem; line-height: 1;
+    margin: -4px 0;
+  }
+
+  /* ---- steps ---- */
+  .steps { display: grid; gap: 14px; margin-top: 18px; }
+  .step {
+    display: grid; grid-template-columns: 46px 1fr; gap: 14px;
+    border: 1px solid var(--border); border-radius: var(--radius);
+    background: var(--bg-soft); padding: 16px 18px;
+  }
+  .step .idx {
+    font-weight: 800; font-size: 1.05rem; color: #fff;
+    width: 46px; height: 46px; border-radius: 12px;
+    display: grid; place-items: center;
+  }
+  .step h3 { margin: 2px 0 6px; font-size: 1.03rem; }
+  .step p { margin: 0 0 9px; color: var(--text); }
+  .step .ref {
+    font-size: .85rem; color: var(--muted);
+    border-left: 3px solid var(--border); padding-left: 10px;
+  }
+  .step .ref b { color: var(--text); font-weight: 600; }
+  .g1 .idx { background: var(--p1); } .g2 .idx { background: var(--p2); }
+  .g3 .idx { background: var(--p3); } .g4 .idx { background: var(--p4); }
+
+  .tablewrap { overflow-x: auto; margin-top: 18px; border: 1px solid var(--border); border-radius: var(--radius); }
+  table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border-soft); vertical-align: top; }
+  th { background: var(--bg-inset); font-weight: 700; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  .tag { font-size: .74rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+  .tag.ok { background: #dafbe1; color: #1a7f37; }
+  .tag.na { background: #fff8c5; color: #9a6700; }
+  html[data-theme="dark"] .tag.ok { background: #10261a; color: #3fb950; }
+  html[data-theme="dark"] .tag.na { background: #2e2410; color: #d29922; }
+  .note {
+    margin-top: 16px; font-size: .88rem; color: var(--muted);
+    background: var(--bg-soft); border: 1px dashed var(--border);
+    border-radius: var(--radius-sm); padding: 12px 16px;
+  }
+
+  .callout {
+    margin-top: 34px; border: 1px solid var(--border); border-left: 4px solid var(--accent);
+    border-radius: var(--radius); background: var(--bg-soft); padding: 16px 20px;
+  }
+  .callout h3 { margin: 0 0 6px; }
+  .callout p { margin: 0; color: var(--muted); }
+  footer { border-top: 1px solid var(--border); padding: 22px 0 40px; color: var(--muted); font-size: .86rem; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <button class="theme-btn" id="themeBtn" type="button">Toggle theme</button>
+    <h1>The 14 Steps of an Advanced Playwright Framework</h1>
+    <p>Explained in plain English — what each step is, why it matters, and where it lives in a real framework. The 14 steps below are the reference list, cross-checked against the TTA Advance Playwright Framework.</p>
+    <div class="source">
+      Reference framework (cross-checked):
+      <a href="https://app.thetestingacademy.com/playwright/advance-framework" target="_blank" rel="noopener">app.thetestingacademy.com/playwright/advance-framework</a>
+    </div>
+    <div class="badges">
+      <span class="badge">TypeScript</span>
+      <span class="badge">Page Object Model</span>
+      <span class="badge">Fixtures</span>
+      <span class="badge">Data-driven</span>
+      <span class="badge">Reporting</span>
+      <span class="badge">API + UI</span>
+      <span class="badge">CI/CD</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <h2><span class="n">&#9656;</span> The one-line version</h2>
+  <p class="lead">If you remember nothing else, remember the order of the work.</p>
+  <div class="flowline">
+    <b>Set up the structure</b><span class="sep">&#8594;</span>
+    <b>teach Playwright the rules</b><span class="sep">&#8594;</span>
+    <b>keep secrets &amp; data separate</b><span class="sep">&#8594;</span>
+    <b>build reusable pieces</b><span class="sep">&#8594;</span>
+    <b>wire it together</b><span class="sep">&#8594;</span>
+    <b>make it observable</b><span class="sep">&#8594;</span>
+    <b>automate it</b>
+  </div>
+
+  <h2><span class="n">&#9656;</span> The big picture (easy diagram)</h2>
+  <p class="lead">Four phases. The 14 steps live inside them, and each phase feeds the next.</p>
+  <div class="diagram">
+
+    <div class="phase p1">
+      <div class="phase-head">
+        <span class="phase-tag">Phase 1</span>
+        <span class="phase-title">Set up the ground rules</span>
+      </div>
+      <div class="chips">
+        <span class="chip"><span class="num">1</span> Project Setup and Folder Structure</span>
+        <span class="chip"><span class="num">2</span> Playwright Configuration</span>
+        <span class="chip"><span class="num">3</span> Environment and Credential Management</span>
+      </div>
+    </div>
+    <div class="arrow">&#8595;</div>
+
+    <div class="phase p2">
+      <div class="phase-head">
+        <span class="phase-tag">Phase 2</span>
+        <span class="phase-title">Build the reusable pieces</span>
+      </div>
+      <div class="chips">
+        <span class="chip"><span class="num">4</span> Common Utilities and BasePage</span>
+        <span class="chip"><span class="num">5</span> Page Object Model (POM)</span>
+        <span class="chip"><span class="num">6</span> Common Element Interaction Methods</span>
+        <span class="chip"><span class="num">7</span> Custom Fixtures and Dependency Injection</span>
+        <span class="chip"><span class="num">8</span> Test Data Management and Generation</span>
+      </div>
+    </div>
+    <div class="arrow">&#8595;</div>
+
+    <div class="phase p3">
+      <div class="phase-head">
+        <span class="phase-tag">Phase 3</span>
+        <span class="phase-title">Write it, then prove it works</span>
+      </div>
+      <div class="chips">
+        <span class="chip"><span class="num">9</span> Writing Test Cases</span>
+        <span class="chip"><span class="num">10</span> Assertions and Validation</span>
+        <span class="chip"><span class="num">11</span> Logging and Screenshots</span>
+        <span class="chip"><span class="num">12</span> Test Reporting</span>
+      </div>
+    </div>
+    <div class="arrow">&#8595;</div>
+
+    <div class="phase p4">
+      <div class="phase-head">
+        <span class="phase-tag">Phase 4</span>
+        <span class="phase-title">Test the backend &amp; run it by itself</span>
+      </div>
+      <div class="chips">
+        <span class="chip"><span class="num">13</span> API Testing and Schema Validation</span>
+        <span class="chip"><span class="num">14</span> Test Execution and CI/CD Integration</span>
+      </div>
+    </div>
+
+  </div>
+
+  <h2><span class="n">&#9656;</span> The 14 steps, in plain English</h2>
+  <p class="lead">Each step says what it is, and why it's there.</p>
+
+  <div class="steps">
+
+    <div class="step g1">
+      <div class="idx">1</div>
+      <div>
+        <h3>Project Setup and Folder Structure</h3>
+        <p>We start by creating a TypeScript Playwright project and laying it out in clear folders — pages, tests, utilities, test data, and configuration. Every part has a home, so the project stays tidy and easy to grow.</p>
+        <p class="ref"><b>Where it lives:</b> <code>src/pages</code>, <code>src/tests</code>, <code>src/utils</code>, <code>src/testdata</code>, <code>src/config</code></p>
+      </div>
+    </div>
+
+    <div class="step g1">
+      <div class="idx">2</div>
+      <div>
+        <h3>Playwright Configuration</h3>
+        <p>This is the control room. In one file we decide the application URL, which browsers to use, timeouts, retries, parallel execution, and which reports to produce. Change it once, and the whole suite follows.</p>
+        <p class="ref"><b>Where it lives:</b> <code>playwright.config.ts</code></p>
+      </div>
+    </div>
+
+    <div class="step g1">
+      <div class="idx">3</div>
+      <div>
+        <h3>Environment and Credential Management</h3>
+        <p>URLs, usernames, and passwords live in environment variables and <code>.env</code> files instead of the code. Moving from QA to staging to production is a one-value change, with nothing sensitive committed to Git.</p>
+        <p class="ref"><b>Where it lives:</b> <code>.env.example</code>, <code>src/config/envs.ts</code> (qa / stg / dev / prod)</p>
+      </div>
+    </div>
+
+    <div class="step g2">
+      <div class="idx">4</div>
+      <div>
+        <h3>Common Utilities and BasePage</h3>
+        <p>Every page needs the same basics — navigate, log, wait, interact. We write those once in shared helpers and a <code>BasePage</code> class that pages extend, so nothing gets rewritten page after page.</p>
+        <p class="ref"><b>Where it lives:</b> <code>src/pages/BasePage.ts</code>, <code>src/utils/Logger.ts</code></p>
+      </div>
+    </div>
+
+    <div class="step g2">
+      <div class="idx">5</div>
+      <div>
+        <h3>Page Object Model (POM)</h3>
+        <p>Each screen — Login, Inventory, Cart, Checkout — becomes its own class holding that page's elements and actions. Tests then read like plain steps, and a UI change is fixed in one spot instead of across dozens of tests.</p>
+        <p class="ref"><b>Where it lives:</b> <code>src/pages/*.ts</code></p>
+      </div>
+    </div>
+
+    <div class="step g2">
+      <div class="idx">6</div>
+      <div>
+        <h3>Common Element Interaction Methods</h3>
+        <p>A single utility, <code>UtilElementLocator</code>, handles click, type, read, select, and wait. Every interaction in the framework behaves the same way, which keeps things predictable.</p>
+        <p class="ref"><b>Where it lives:</b> <code>src/utils/UtilElementLocator.ts</code></p>
+      </div>
+    </div>
+
+    <div class="step g2">
+      <div class="idx">7</div>
+      <div>
+        <h3>Custom Fixtures and Dependency Injection</h3>
+        <p>Rather than assembling page objects inside each test, fixtures prepare and hand them over. A test asks for <code>{ loginPage, cartPage }</code> and gets them ready to use — less boilerplate, fewer slip-ups.</p>
+        <p class="ref"><b>Where it lives:</b> <code>src/fixtures/test-base.ts</code></p>
+      </div>
+    </div>
+
+    <div class="step g2">
+      <div class="idx">8</div>
+      <div>
+        <h3>Test Data Management and Generation</h3>
+        <p>Test data sits outside the test scripts. Use fixed files or generate fresh values with Faker — either way, data can change without touching the test logic.</p>
+        <p class="ref"><b>Where it lives:</b> <code>src/testdata/*</code>, <code>src/utils/DataFactory.ts</code></p>
+      </div>
+    </div>
+
+    <div class="step g3">
+      <div class="idx">9</div>
+      <div>
+        <h3>Writing Test Cases</h3>
+        <p>Test cases live in separate spec files, like <code>e2e-checkout.spec.ts</code>. Each describes the steps to run and drives the app through page objects — readable from top to bottom.</p>
+        <p class="ref"><b>Where it lives:</b> <code>src/tests/*.spec.ts</code></p>
+      </div>
+    </div>
+
+    <div class="step g3">
+      <div class="idx">10</div>
+      <div>
+        <h3>Assertions and Validation</h3>
+        <p>Assertions are what give a test meaning — the page loaded, the item reached the cart, the order was placed. Without them, a passing run proves nothing.</p>
+        <p class="ref"><b>Where it lives:</b> <code>expect(...)</code> throughout <code>src/tests/</code></p>
+      </div>
+    </div>
+
+    <div class="step g3">
+      <div class="idx">11</div>
+      <div>
+        <h3>Logging and Screenshots</h3>
+        <p>We log the run and capture screenshots, video, and traces. When something fails — especially in CI — the evidence shows exactly where and what went wrong.</p>
+        <p class="ref"><b>Where it lives:</b> <code>src/utils/Logger.ts</code> &#8594; <code>logs/</code>; artifacts &#8594; <code>test-results/</code></p>
+      </div>
+    </div>
+
+    <div class="step g3">
+      <div class="idx">12</div>
+      <div>
+        <h3>Test Reporting</h3>
+        <p>Reporters — the custom TTA reporter plus Allure and the built-in HTML one — turn results into a clear report: passes, failures, screenshots, and timings in one view.</p>
+        <p class="ref"><b>Where it lives:</b> <code>src/utils/CustomTTAReporter.ts</code> &#8594; <code>tta-report/</code></p>
+      </div>
+    </div>
+
+    <div class="step g4">
+      <div class="idx">13</div>
+      <div>
+        <h3>API Testing and Schema Validation</h3>
+        <p>Next to UI checks, we add reusable API methods that verify status codes and response data, and validate the response shape with JSON Schema. Faster than the UI, and it exposes what the UI hides.</p>
+        <p class="ref"><b>Where it lives:</b> <code>src/api/</code> with <code>APIRequestContext</code> (not in TTACart — no backend)</p>
+      </div>
+    </div>
+
+    <div class="step g4">
+      <div class="idx">14</div>
+      <div>
+        <h3>Test Execution and CI/CD Integration</h3>
+        <p>Finally, tests run locally and then on their own through a pipeline. GitHub Actions runs the suite on every push, sharding it across parallel jobs; Docker keeps the environment identical everywhere and reports are published automatically.</p>
+        <p class="ref"><b>Where it lives:</b> <code>.github/workflows/</code>, <code>Dockerfile</code>, <code>package.json</code> scripts</p>
+      </div>
+    </div>
+
+  </div>
+
+  <h2><span class="n">&#9656;</span> Cross-check against the reference framework steps</h2>
+  <p class="lead">Each of the 14 steps checked against the reference framework, so you can see where it lives and whether it is included. Reference: <a href="https://app.thetestingacademy.com/playwright/advance-framework" target="_blank" rel="noopener">app.thetestingacademy.com/playwright/advance-framework</a>.</p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>#</th><th>Step</th><th>Reference framework location</th><th>Present?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Project setup &amp; folders</td><td><code>src/pages</code>, <code>src/tests</code>, <code>src/utils</code>, <code>src/testdata</code>, <code>src/config</code></td><td><span class="tag ok">Yes</span></td></tr>
+        <tr><td>2</td><td>Playwright configuration</td><td><code>playwright.config.ts</code> — baseURL, projects, reporters, retries</td><td><span class="tag ok">Yes</span></td></tr>
+        <tr><td>3</td><td>Environment &amp; credentials</td><td><code>.env.example</code>, <code>src/config/envs.ts</code> (qa / stg / dev / prod)</td><td><span class="tag ok">Yes</span></td></tr>
+        <tr><td>4</td><td>Utilities &amp; BasePage</td><td><code>src/pages/BasePage.ts</code>, <code>src/utils/Logger.ts</code>, <code>DateUtil.ts</code></td><td><span class="tag ok">Yes</span></td></tr>
+        <tr><td>5</td><td>Page Object Model</td><td><code>src/pages/*.ts</code> — one class per page</td><td><span class="tag ok">Yes</span></td></tr>
+        <tr><td>6</td><td>Element interaction methods</td><td><code>src/utils/UtilElementLocator.ts</code></td><td><span class="tag ok">Yes</span></td></tr>
+        <tr><td>7</td><td>Custom fixtures</td><td><code>src/fixtures/test-base.ts</code></td><td><span class="tag ok">Yes</span></td></tr>
+        <tr><td>8</td><td>Test data &amp; generation</td><td><code>src/testdata/*</code>, <code>src/utils/DataFactory.ts</code>, <code>FileReader.ts</code></td><td><span class="tag ok">Yes</span></td></tr>
+        <tr><td>9</td><td>Writing test cases</td><td><code>src/tests/*.spec.ts</code></td><td><span class="tag ok">Yes</span></td></tr>
+        <tr><td>10</td><td>Assertions &amp; validation</td><td><code>expect(...)</code> across <code>src/tests/</code></td><td><span class="tag ok">Yes</span></td></tr>
+        <tr><td>11</td><td>Logging &amp; screenshots</td><td><code>src/utils/Logger.ts</code> &#8594; <code>logs/</code>; artifacts &#8594; <code>test-results/</code></td><td><span class="tag ok">Yes</span></td></tr>
+        <tr><td>12</td><td>Test reporting</td><td><code>CustomTTAReporter.ts</code> &#8594; <code>tta-report/</code>; plus HTML + Allure</td><td><span class="tag ok">Yes</span></td></tr>
+        <tr><td>13</td><td>API testing &amp; schema</td><td><code>src/api/</code> using <code>APIRequestContext</code> + JSON Schema</td><td><span class="tag na">No (TTACart)</span></td></tr>
+        <tr><td>14</td><td>Execution &amp; CI/CD</td><td><code>.github/workflows/</code> (sharded 4-way), <code>Dockerfile</code>, npm scripts</td><td><span class="tag ok">Yes</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <b>Good to know:</b> the reference page's own "build it folder by folder" section is labelled <i>eight steps</i> (it actually lists nine).
+    The 14 steps here describe the full lifecycle — from project setup through CI/CD. Step 13 (API testing) is not present in the TTACart suite
+    because it has no backend — state is held in localStorage only.
+  </div>
+
+  <div class="callout">
+    <h3>The whole thing in one sentence</h3>
+    <p>Set up the structure &#8594; teach Playwright the rules &#8594; keep secrets and data separate &#8594; build reusable pieces &#8594; give each page a home &#8594; wire it together with fixtures &#8594; then make it observable and run it automatically.</p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Learning Playwright Fundamentals &middot; ResearchTopics &middot; The 14 steps of an advanced Playwright framework.
+    Reference: <a href="https://app.thetestingacademy.com/playwright/advance-framework" target="_blank" rel="noopener">TTA Advance Playwright Framework</a>.
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var saved = null;
+    try { saved = localStorage.getItem("pw-framework-theme"); } catch (e) {}
+    if (!saved) {
+      saved = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    root.setAttribute("data-theme", saved);
+    var btn = document.getElementById("themeBtn");
+    if (btn) {
+      btn.addEventListener("click", function () {
+        var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("pw-framework-theme", next); } catch (e) {}
+      });
+    }
+  })();
+</script>
+</body>
+</html>
